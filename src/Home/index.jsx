@@ -51,24 +51,14 @@ export default class Home extends React.Component {
 
   render() {
     const children = [
-      <Nav0
-        id="Nav0_0"
-        key="Nav0_0"
-        dataSource={Nav00DataSource}
-        isMobile={this.state.isMobile}
-      />,
+
       <Banner0
         id="Banner0_1"
         key="Banner0_1"
         dataSource={Banner01DataSource}
         isMobile={this.state.isMobile}
       />,
-      <Footer1
-        id="Footer1_0"
-        key="Footer1_0"
-        dataSource={Footer10DataSource}
-        isMobile={this.state.isMobile}
-      />,
+
     ];
     return (
       <div

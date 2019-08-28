@@ -6,95 +6,6 @@ export const Nav00DataSource = {
     className: 'header0-logo',
     children: 'https://os.alipayobjects.com/rmsportal/mlcYmsRilwraoAe.svg',
   },
-  Menu: {
-    className: 'header0-menu',
-    children: [
-      {
-        name: 'item0',
-        className: 'header0-item',
-        children: {
-          href: '#',
-          children: [{ children: '导航一', name: 'text' }],
-        },
-        subItem: [
-          {
-            name: 'sub0',
-            className: 'item-sub',
-            children: {
-              className: 'item-sub-item',
-              children: [
-                {
-                  name: 'image0',
-                  className: 'item-image',
-                  children:
-                    'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
-                },
-                {
-                  name: 'title',
-                  className: 'item-title',
-                  children: 'Ant Design',
-                },
-                {
-                  name: 'content',
-                  className: 'item-content',
-                  children: '企业级 UI 设计体系',
-                },
-              ],
-            },
-          },
-          {
-            name: 'sub1',
-            className: 'item-sub',
-            children: {
-              className: 'item-sub-item',
-              children: [
-                {
-                  name: 'image0',
-                  className: 'item-image',
-                  children:
-                    'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
-                },
-                {
-                  name: 'title',
-                  className: 'item-title',
-                  children: 'Ant Design',
-                },
-                {
-                  name: 'content',
-                  className: 'item-content',
-                  children: '企业级 UI 设计体系',
-                },
-              ],
-            },
-          },
-        ],
-      },
-      {
-        name: 'item1',
-        className: 'header0-item',
-        children: {
-          href: '#',
-          children: [{ children: '导航二', name: 'text' }],
-        },
-      },
-      {
-        name: 'item2',
-        className: 'header0-item',
-        children: {
-          href: '#',
-          children: [{ children: '导航三', name: 'text' }],
-        },
-      },
-      {
-        name: 'item3',
-        className: 'header0-item',
-        children: {
-          href: '#',
-          children: [{ children: '导航四', name: 'text' }],
-        },
-      },
-    ],
-  },
   mobileMenu: { className: 'header0-mobile-menu' },
 };
 export const Feature20DataSource = {
@@ -102,18 +13,22 @@ export const Feature20DataSource = {
   OverPack: { className: 'home-page content2', playScale: 0.3 },
   imgWrapper: { className: 'content2-img', md: 10, xs: 24 },
   img: {
-    children: 'https://zos.alipayobjects.com/rmsportal/tvQTfCupGUFKSfQ.png',
+    children: 'https://www.culturallydiversity.tk/images/china.jpg',
   },
   textWrapper: { className: 'content2-text', md: 14, xs: 24 },
   title: {
     className: 'content2-title',
-    children: (
+    children:
+        {
+          target: '/country',
+          children: (
       <>
         <p>
           <b>China</b>
         </p>
       </>
-    ),
+    )
+        },
   },
   content: {
     className: 'content2-content',
@@ -121,13 +36,13 @@ export const Feature20DataSource = {
       <>
         <p>
           <b>
-            China (Chinese: 中国; pinyin: Zhōngguó; lit. "Middle Kingdom" or
-            "Central State"), officially the People's Republic of China (PRC),
-            is a country in East Asia and the world's most populous country,
-            with a population of around 1.404 billion.[10] Covering
-            approximately 9,600,000 square kilometers (3,700,000 sq mi), it is
-            the third or fourth largest country by total area.
+            China is a multinational country that belongs to the continent of Asia, with a population composed of a great number of linguistic and ethnic groups. It is officially known as the “People's Republic of China”. It may not be known to many but China has the second largest economy in the world, after the United States of America. It is also the world’s third largest country with over 1.3 billion people. The languages spoken in China are Mandarin, Yue, Wu, Minbei, Minnan, Xiang, Gan and Hakka.
           </b>
+
+        </p>
+        <p><b>
+            Click on “China”, the page will introduce you Chinese traditional festival, Chinese food and some taboos.
+        </b>
         </p>
       </>
     ),

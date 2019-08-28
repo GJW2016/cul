@@ -45,9 +45,7 @@ class Header extends React.Component {
             {subItem.map(($item, ii) => {
               const { children: childItem } = $item;
               const child = childItem.href ? (
-                <a {...childItem}
-                to={childItem.href}
-                target={childItem.target}>
+                <a {...childItem}>
                   {childItem.children.map(getChildrenToRender)}
                 </a>
               ) : (
@@ -57,7 +55,7 @@ class Header extends React.Component {
               );
               return (
                 <Item key={$item.name || ii.toString()} {...$item}>
-                  {child}
+                   {child}
 
                 </Item>
               );
@@ -89,7 +87,9 @@ class Header extends React.Component {
             animation={{ x: -30, type: 'from', ease: 'easeOutQuad' }}
             {...dataSource.logo}
           >
-            <img width="100%" src={dataSource.logo.children} alt="img" />
+            <a href={dataSource.logo.children.target}>
+            <img width="100%" src={dataSource.logo.children.pic} alt="img" />
+            </a>
           </TweenOne>
           {isMobile && (
             <div

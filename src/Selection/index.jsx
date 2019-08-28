@@ -3,7 +3,7 @@
 import React from 'react';
 import { enquireScreen } from 'enquire-js';
 
-import Nav0 from './Nav0';
+
 import Feature2 from './Feature2';
 
 import { Nav00DataSource, Feature20DataSource } from './data.source';
@@ -16,7 +16,7 @@ enquireScreen((b) => {
 
 const { location } = window;
 
-export default class Home extends React.Component {
+export default class Home1 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -45,12 +45,6 @@ export default class Home extends React.Component {
 
   render() {
     const children = [
-      <Nav0
-        id="Nav0_0"
-        key="Nav0_0"
-        dataSource={Nav00DataSource}
-        isMobile={this.state.isMobile}
-      />,
       <Feature2
         id="Feature2_0"
         key="Feature2_0"

@@ -43,6 +43,7 @@ function Content2(props) {
     </TweenOne>
   );
   return (
+
     <div {...tagProps} {...dataSource.wrapper}>
       <OverPack {...dataSource.OverPack} component={Row}>
         {isMobile && img}
@@ -58,8 +59,10 @@ function Content2(props) {
             xs: dataSource.textWrapper.xs,
           }}
         >
-          <h2 key="h1" {...dataSource.title}>
-            {dataSource.title.children}
+           <br />
+          <h2 key="h1">
+              <a href={dataSource.title.children.target}>
+                  {dataSource.title.children.children}</a>
           </h2>
           <div key="p" {...dataSource.content}>
             {dataSource.content.children}
