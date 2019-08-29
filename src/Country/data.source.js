@@ -16,7 +16,7 @@ export const Pricing00DataSource = {
     className: 'pricing0-img',
     name: 'image',
     children:
-      'https://gw.alipayobjects.com/mdn/rms_ae7ad9/afts/img/A*OnyWT4Nsxy0AAAAAAAAAAABjARQnAQ',
+      'https://www.culturallydiversity.tk/images/clock.jpg',
   },
   childWrapper: {
     className: 'pricing0-text-wrapper',
@@ -38,7 +38,7 @@ export const Pricing00DataSource = {
         name: 'pricing',
         children: (
           <>
-            <p>People don't send clock as a gift because it means bad luck.</p>
+            <p><font size='3'>People don't send clock as a gift because it means bad luck.</font></p>
           </>
         ),
         className: 'pricing0-pricing',
@@ -46,11 +46,11 @@ export const Pricing00DataSource = {
 {
         name: 'button',
         children: {
-          href: '#',
+          href: '/country4',
           type: 'primary',
           children: 'Previous',
           className: 'jzsf6tebesu-editor_css',
-          icon: 'https://landing.ant.design',
+          icon: '',
         },
       },
       {
@@ -58,9 +58,9 @@ export const Pricing00DataSource = {
         className: 'jzsf76x9upj-editor_css',
         children: {
           children: 'Next',
-          href: '#',
+          href: '/country1',
           type: 'primary',
-          icon: 'https://blog.csdn.net/C11611/article/details/81878570',
+          icon: '',
           className: 'jzsf75i7dcm-editor_css',
         },
       },

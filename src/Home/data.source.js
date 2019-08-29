@@ -17,69 +17,16 @@ export const Nav00DataSource = {
         name: 'item0',
         className: 'header0-item',
         children: {
-          href: '#',
+          href: '/#page2',
           children: [{ children:'Cultural Info', name: 'text' }],
         },
-        subItem: [
-          {
-            name: 'sub0',
-            className: 'item-sub',
-            children: {
-              href: '/page2',
-              className: 'item-sub-item',
-              children: [
-                {
-                  name: 'image0',
-                  className: 'item-image',
-                  children:
-                    'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
-                },
-                {
-                  name: 'title',
-                  className: 'item-title',
-                  children: 'China',
-                },
-                {
-                  name: 'content',
-                  className: 'item-content',
-                  children: 'China',
-                },
-              ],
-            },
-          },
-          {
-            name: 'sub1',
-            className: 'item-sub',
-            children: {
-              className: 'item-sub-item',
-              children: [
-                {
-                  name: 'image0',
-                  className: 'item-image',
-                  children:
-                    'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
-                },
-                {
-                  name: 'title',
-                  className: 'item-title',
-                  children: 'India',
-                },
-                {
-                  name: 'content',
-                  className: 'item-content',
-                  children: 'India',
-                },
-              ],
-            },
-          },
-        ],
       },
       {
         name: 'item1',
         className: 'header0-item',
         children: {
           href: '/analysis',
-          children: [{ children: 'Interesting Facts', name: 'text' }],
+          children: [{ children: ('Interesting Facts'), name: 'text' }],
         },
       },
     ],
@@ -97,7 +44,7 @@ export const Banner01DataSource = {
     className: 'banner0-content',
     children: (
       <>
-        <p>Get to know your life</p>
+        <p>Get to know more about your university's cultural diversity</p>
       </>
     ),
   },
