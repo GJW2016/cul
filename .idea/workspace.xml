@@ -3,13 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2a22f0b0-21e3-455f-a2ac-607f6ddcc25e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Country/Pricing0.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Country/Pricing0.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Country/data.source.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Country/data.source.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Country/documentation.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Home/data.source.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/data.source.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home/less/banner0.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/less/banner0.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home/less/nav0.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/less/nav0.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Selection/Feature2.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selection/Feature2.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Selection/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selection/index.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,8 +53,11 @@
     <property name="javascript.nodejs.core.library.configured.version" value="10.16.3" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
@@ -119,7 +120,14 @@
       <workItem from="1566988501110" duration="48000" />
       <workItem from="1566993590701" duration="825000" />
       <workItem from="1567009591502" duration="2883000" />
-      <workItem from="1567041566998" duration="3058000" />
+      <workItem from="1567041566998" duration="4081000" />
+      <workItem from="1567390094824" duration="184000" />
+      <workItem from="1567603127411" duration="7808000" />
+      <workItem from="1567646599012" duration="680000" />
+      <workItem from="1567686590043" duration="5127000" />
+      <workItem from="1567841948503" duration="5690000" />
+      <workItem from="1567872242416" duration="4160000" />
+      <workItem from="1567922377472" duration="1829000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1566714047602</created>
@@ -156,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566974778949</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="iteration1--version0.91">
+      <created>1567044914242</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1567044914242</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +193,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new" />
     <MESSAGE value="iteration1--version0.9" />
-    <option name="LAST_COMMIT_MESSAGE" value="iteration1--version0.9" />
+    <MESSAGE value="iteration1--version0.91" />
+    <option name="LAST_COMMIT_MESSAGE" value="iteration1--version0.91" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

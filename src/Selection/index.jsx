@@ -2,10 +2,8 @@
 /* eslint arrow-parens: 0 */
 import React from 'react';
 import { enquireScreen } from 'enquire-js';
-
-
+import axios from 'axios'
 import Feature2 from './Feature2';
-
 import { Nav00DataSource, Feature20DataSource } from './data.source';
 import './less/antMotionStyle.less';
 
@@ -30,6 +28,13 @@ export default class Home1 extends React.Component {
     enquireScreen((b) => {
       this.setState({ isMobile: !!b });
     });
+     const url = 'https://www.culturallydiversity.tk/country'
+                axios.get(url)
+                    .then(response => {
+                        const result = response.data;
+                        const {name,html_url} = result.items[0];
+                        this.setState({repoName:name,repoUrl:html_url});
+                    })
     // dva 2.0 样式在组件渲染之后动态加载，导致滚动组件不生效；线上不影响；
     /* 如果不是 dva 2.0 请删除 start */
     if (location.port) {
@@ -40,6 +45,7 @@ export default class Home1 extends React.Component {
         });
       }, 500);
     }
+
     /* 如果不是 dva 2.0 请删除 end */
   }
 
@@ -51,6 +57,7 @@ export default class Home1 extends React.Component {
         dataSource={Feature20DataSource}
         isMobile={this.state.isMobile}
       />,
+
     ];
     return (
       <div
