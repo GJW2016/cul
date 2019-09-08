@@ -11,6 +11,7 @@ import Country2 from './Country2'
 import Country3 from './Country3'
 import Country4 from './Country4'
 import Analysis from './Analysis'
+import Calendar from "./Calendar";
 import {
   Nav00DataSource,
   Footer10DataSource,
@@ -40,6 +41,7 @@ class App extends Component {
         <div>
           <Header dataSource={Nav00DataSource} isMobile={this.isMobile} />
           <Route exact path="/" component={Home} />
+          <Route exact path="/calender" component={Calendar} />
           <Route exact path="/page2" component={select} />
           <Route exact path="/country" component={Country} />
           <Route exact path="/country1" component={Country1} />
