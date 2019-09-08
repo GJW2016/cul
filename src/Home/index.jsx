@@ -2,15 +2,11 @@
 /* eslint arrow-parens: 0 */
 import React from 'react';
 import { enquireScreen } from 'enquire-js';
-
-import Nav0 from './Nav0';
-import Banner0 from './Banner0';
-import Footer1 from './Footer1';
-
+import Banner0 from './/Banner0';
+import Pricing0 from './Pricing0';
 import {
-  Nav00DataSource,
   Banner01DataSource,
-  Footer10DataSource,
+  Pricing00DataSource,
 } from './data.source';
 import './less/antMotionStyle.less';
 
@@ -29,7 +25,6 @@ export default class Home extends React.Component {
       show: !location.port, // 如果不是 dva 2.0 请删除
     };
   }
-
 
   componentDidMount() {
     // 适配手机屏幕;
@@ -51,14 +46,18 @@ export default class Home extends React.Component {
 
   render() {
     const children = [
-
       <Banner0
         id="Banner0_1"
         key="Banner0_1"
         dataSource={Banner01DataSource}
         isMobile={this.state.isMobile}
       />,
-
+      <Pricing0
+        id="Pricing0_0"
+        key="Pricing0_0"
+        dataSource={Pricing00DataSource}
+        isMobile={this.state.isMobile}
+      />
     ];
     return (
       <div

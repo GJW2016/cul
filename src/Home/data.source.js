@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 export const Nav00DataSource = {
   wrapper: { className: 'header0 home-page-wrapper' },
   page: { className: 'home-page' },
@@ -17,16 +18,24 @@ export const Nav00DataSource = {
         name: 'item0',
         className: 'header0-item',
         children: {
-          href: '/page2',
-          children: [{ children:'Cultural Info', name: 'text' }],
+          href: '/',
+          children: [{ children:'Home', name: 'text' }],
         },
       },
       {
         name: 'item1',
         className: 'header0-item',
         children: {
-          href: '/analysis',
-          children: [{ children: ('Interesting Facts'), name: 'text' }],
+          href: '/page2',
+          children: [{ children: ('Cultural Info'), name: 'text' }],
+        },
+      },
+      {
+      name: 'item2',
+      className: 'header0-item',
+      children: {
+        href: '/',
+        children: [{ children: ('Festival calendar'), name: 'text' }],
         },
       },
     ],
@@ -44,7 +53,7 @@ export const Banner01DataSource = {
     className: 'banner0-content',
     children: (
       <>
-        <p>Get to know more about your university's cultural diversity</p>
+        <p><strong>"We are aiming at helping international students in Australia foster meaningful friendship with each other"</strong></p>
       </>
     ),
   },
@@ -52,6 +61,50 @@ export const Banner01DataSource = {
     className: 'banner0-button',
     href:'/analysis',
     children: 'learn more',
+  },
+};
+export const Pricing00DataSource = {
+  wrapper: { className: 'home-page-wrapper pricing0-wrapper' },
+  OverPack: { playScale: 0.3, className: 'home-page pricing0' },
+  imgWrapper: { className: 'pricing0-img-wrapper', md: 12, xs: 20 },
+  img: {
+    className: 'pricing0-img',
+    name: 'image',
+    children: 'https://www.culturallydiversity.tk/images/home/home_1.jpg',
+  },
+  childWrapper: {
+    className: 'pricing0-text-wrapper',
+    md: 12,
+    xs: 24,
+    children: [
+      {
+        name: 'title',
+        children: (<h2>What we offer</h2>),
+        className: 'pricing0-title',
+      },
+      {
+        name: 'content',
+        children:(
+
+            <h3>
+              We understand that it get difficult to make friends with people from different background. But guess what?
+              <br />
+              All of us love food and enjoy festivals irrespective of what country we are from. Thus, being a great converstion starter!
+              <br />
+              Our website is specifically focused on China, India, Nepal and Australia (of course!).
+              <br />
+              <br />
+              <br />
+              <br />
+            </h3>
+        ),
+        className: 'pricing0-content',
+      },
+      {
+        name: 'button',
+        children: { href: '#', type: 'primary', children: 'find out more' },
+      },
+    ],
   },
 };
 export const Footer10DataSource = {
@@ -124,7 +177,7 @@ export const Footer10DataSource = {
     children: (
       <>
         <span>
-          ©2019 by <a href="https://motion.ant.design">B16</a> All Rights
+          ©2019 by <a href="https://www.culturallydiversity.tk/">B16</a> All Rights
           Reserved
         </span>
       </>

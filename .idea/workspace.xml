@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a22f0b0-21e3-455f-a2ac-607f6ddcc25e" name="Default Changelist" comment="">
+    <list default="true" id="2a22f0b0-21e3-455f-a2ac-607f6ddcc25e" name="Default Changelist" comment="iteration2--version2.0">
+      <change afterPath="$PROJECT_DIR$/src/common/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Home/data.source.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/data.source.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Selection/Feature2.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selection/Feature2.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Home/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Home/less/banner0.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/less/banner0.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
+    </list>
+    <list id="5308e3ae-b011-4a16-8c7e-4897a0ba6160" name="diff1" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Selection/data.source.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selection/data.source.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Selection/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selection/index.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,7 +55,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.16.3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/diff1" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -64,15 +68,15 @@
     <property name="ts.external.directory.path" value="F:\PyCharm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\83716\PycharmProjects\cul\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\83716\PycharmProjects\cul\src\Home" />
+      <recent name="C:\Users\83716\PycharmProjects\cul\src\Home (7)" />
       <recent name="C:\Users\83716\PycharmProjects\cul\src" />
       <recent name="C:\Users\83716\PycharmProjects\cul\src\Analysis" />
       <recent name="C:\Users\83716\PycharmProjects\cul\public" />
-      <recent name="C:\Users\83716\PycharmProjects\cul\src\Selection" />
-      <recent name="C:\Users\83716\PycharmProjects\cul\src\Home" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\83716\PycharmProjects\cul\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -108,6 +112,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="2a22f0b0-21e3-455f-a2ac-607f6ddcc25e" name="Default Changelist" comment="" />
+      <changelist id="5308e3ae-b011-4a16-8c7e-4897a0ba6160" name="diff1" comment="" />
       <created>1566700138524</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -127,7 +132,8 @@
       <workItem from="1567686590043" duration="5127000" />
       <workItem from="1567841948503" duration="5690000" />
       <workItem from="1567872242416" duration="4160000" />
-      <workItem from="1567922377472" duration="1829000" />
+      <workItem from="1567922377472" duration="22963000" />
+      <workItem from="1567961481625" duration="2535000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1566714047602</created>
@@ -171,7 +177,21 @@
       <option name="project" value="LOCAL" />
       <updated>1567044914242</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="iteration2--version2.0">
+      <created>1567925125365</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1567925125365</updated>
+    </task>
+    <task id="LOCAL-00008" summary="iteration2--version2.0">
+      <created>1567925250858</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1567925250858</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,7 +214,8 @@
     <MESSAGE value="new" />
     <MESSAGE value="iteration1--version0.9" />
     <MESSAGE value="iteration1--version0.91" />
-    <option name="LAST_COMMIT_MESSAGE" value="iteration1--version0.91" />
+    <MESSAGE value="iteration2--version2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="iteration2--version2.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
