@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-
+//data APIs
 function getCountries() {
-    return axios.get('https://www.culturallydiversity.tk/country');
+    return axios.get('https://www.culturallydiversity.tk/countries');
 }
 export {getCountries};
 
@@ -16,3 +16,4 @@ function getContents() {
     return axios.get('https://www.culturallydiversity.tk/contents');
 }
 export {getContents};
+

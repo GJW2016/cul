@@ -1,0 +1,54 @@
+.home {
+  padding: 50px 30px;
+  max-width: 1368px;
+  margin: 0 auto;
+}
+.home-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.home-block p {
+  flex: 1;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 1);
+  margin-bottom: 0;
+}
+.home-block img {
+  width: 270px;
+}
+.home-row h3 {
+  font-size: 24px;
+  font-style: italic;
+  text-align: center;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.75);
+}
+.block-wrap {
+  display: flex;
+  justify-content: center;
+}
+.block-content {
+  flex: 1;
+  padding-left: 10px;
+}
+
+.app-button {
+  min-width: 85px;
+  height: 40px;
+  color: #fff;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s;
+  opacity: 1;
+}
+.app-button:focus {
+  outline: none;
+}
+.app-button:hover {
+  opacity: 0.95;
+}

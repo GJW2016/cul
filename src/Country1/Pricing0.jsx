@@ -4,7 +4,6 @@ import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import { Row, Col } from 'antd';
 import { getChildrenToRender } from './utils';
-import Img from '../clock.jpg'
 function Pricing0(props) {
   const { ...tagProps } = props;
   const { dataSource, isMobile } = tagProps;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+//layout of the page
 export const Nav00DataSource = {
   wrapper: { className: 'header0 home-page-wrapper' },
   page: { className: 'home-page' },
@@ -26,7 +26,7 @@ export const Nav00DataSource = {
         name: 'item1',
         className: 'header0-item',
         children: {
-          href: '/page2',
+          href: '/se',
           children: [{ children: ('Cultural Info'), name: 'text' }],
         },
       },
@@ -34,7 +34,7 @@ export const Nav00DataSource = {
       name: 'item2',
       className: 'header0-item',
       children: {
-        href: '/',
+        href: '/calendar',
         children: [{ children: ('Festival calendar'), name: 'text' }],
         },
       },

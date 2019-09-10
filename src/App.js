@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import { enquireScreen } from 'enquire-js';
 import Header from './Home/Nav0';
 import Footer from './Home/Footer1';
@@ -12,6 +12,8 @@ import Country3 from './Country3'
 import Country4 from './Country4'
 import Analysis from './Analysis'
 import Calendar from "./Calendar";
+import se from './SelectionPage'
+
 import {
   Nav00DataSource,
   Footer10DataSource,
@@ -30,19 +32,21 @@ class App extends Component {
     };
   }
   componentDidMount() {
-    // 适配手机屏幕;
+    // adapting mobile screen;
     enquireScreen((b) => {
       this.setState({ isMobile: !!b });
     });
   }
+  //setting router of the website
   render() {
     return (
       <Router>
         <div>
           <Header dataSource={Nav00DataSource} isMobile={this.isMobile} />
           <Route exact path="/" component={Home} />
-          <Route exact path="/calender" component={Calendar} />
+          <Route exact path="/calendar" component={Calendar} />
           <Route exact path="/page2" component={select} />
+          <Route exact path="/se" component={se} />
           <Route exact path="/country" component={Country} />
           <Route exact path="/country1" component={Country1} />
           <Route exact path="/country2" component={Country2} />
