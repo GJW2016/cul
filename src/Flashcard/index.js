@@ -17,7 +17,7 @@ function URLObject(url) {
   }
   return theRequest;
 }
-class Info extends Component {
+class Flashcard extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,16 +26,15 @@ class Info extends Component {
       selectCountries: [],
       countries: [],
       tags: [],
-      banner: [],
-      active: []
+      active: [],
+      banner: []
     };
   }
 
   componentWillMount() {
-    this.initParams();
-    this.getContents();
-    this.getTags();
-    this.getCountries();
+    Promise.all([this.getContents(), this.getTags(), this.getCountries()]).then(() => {
+      this.initParams();
+    });
   }
   async getTags() {
     const { data } = await getTags();
@@ -51,26 +50,17 @@ class Info extends Component {
   }
   initParams() {
     let { selectTags = "", selectCountries = "" } = URLObject();
-    let banner = [];
     try {
-      selectTags = selectTags.split(",") || [];
-      selectCountries = selectCountries.split(",") || [];
+      selectTags = selectTags.split(",").map(id => ~~id) || [];
+      selectCountries = selectCountries.split(",").map(id => ~~id) || [];
     } catch (error) {
       selectTags = [];
       selectCountries = [];
     }
-    selectTags.forEach(tag_id => {
-      selectCountries.forEach(country_id => {
-        banner.push({
-          tag_id: ~~tag_id,
-          country_id: ~~country_id
-        });
-      });
-    });
     this.setState({
       selectTags,
       selectCountries,
-      banner,
+      banner: this.getData(selectTags, selectCountries),
       active: 0
     });
   }
@@ -86,18 +76,24 @@ class Info extends Component {
       data: data.json_list || []
     });
   }
-  getData({ country_id, tag_id }) {
+  getData(selectTags, selectCountries) {
     const { countries, tags, data } = this.state;
-    return {
-      tag: tags.find(item => item.id === tag_id) || {},
-      countrie: countries.find(item => item.id === country_id) || {},
-      desc: data.find(item => item.country_id === country_id && item.tag_id === tag_id) || {}
-    };
+    let result = data.filter(item => {
+      return selectTags.includes(item.tag_id) && selectCountries.includes(item.country_id);
+    });
+    result.map(d => {
+      d.tag = tags.find(item => item.id === d.tag_id) || {};
+      d.countrie = countries.find(item => item.id === d.country_id) || {};
+      d.desc = d;
+      return d;
+    });
+
+    return result;
   }
   onChange = () => {};
   render() {
     const { banner, active } = this.state;
-    const item = banner[active] ? this.getData(banner[active]) : { countrie: {}, desc: {}, tag: {} };
+    const item = banner[active] || { tag: {}, countrie: {}, desc: {} };
     return (
       <div className="info">
         <div className="info-wrap">
@@ -106,7 +102,7 @@ class Info extends Component {
               <h3>{item.countrie.name}</h3>
               <p>{item.countrie.des}</p>
             </div>
-            <img width="175" src={item.countrie.img} alt="" />
+            <img width="175" style={{ height: "auto" }} src={item.countrie.img} alt="" />
           </div>
           <div className="info-banner">
             <div
@@ -120,7 +116,15 @@ class Info extends Component {
               <Icon type="left" />
             </div>
             <div className="info-banner-inner">
-              <div>{item.desc.content}</div>
+              <div className="info-content">
+                <div style={{ width: 200 }}>
+                  <img style={{ width: 200, height: "auto" }} src={item.img} alt="" />
+                </div>
+                <div style={{ flex: 1, paddingLeft: 20 }}>
+                  <h3>{item.tag.name}</h3>
+                  <p>{item.desc.content}</p>
+                </div>
+              </div>
             </div>
             <div
               className="info-right-btn"
@@ -139,4 +143,4 @@ class Info extends Component {
   }
 }
 
-export default Info;
+export default Flashcard;

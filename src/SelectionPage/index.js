@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Row, Col, Checkbox } from "antd";
 import "./index.css";
 import { getTags, getCountries } from "../common/api";
+
+
 class SelectionPage extends Component {
   constructor(props) {
     super(props);
@@ -44,7 +46,7 @@ class SelectionPage extends Component {
   onClick = () => {
     const { selectTags, selectCountries } = this.state;
     if (!selectTags.length || !selectCountries.length) {
-      return;
+      return alert("Please choose");
     }
     this.props.history.push(`/flash?selectTags=${selectTags.join(",")}&selectCountries=${selectCountries.join(",")}`);
   };
