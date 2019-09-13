@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Row, Col, Checkbox } from "antd";
 import "./index.css";
 import { getTags, getCountries } from "../common/api";
-class Home extends Component {
+class SelectionPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -46,7 +46,7 @@ class Home extends Component {
     if (!selectTags.length || !selectCountries.length) {
       return;
     }
-    this.props.history.push(`/info?selectTags=${selectTags.join(",")}&selectCountries=${selectCountries.join(",")}`);
+    this.props.history.push(`/flash?selectTags=${selectTags.join(",")}&selectCountries=${selectCountries.join(",")}`);
   };
   render() {
     const { tags, countries, selectTags, selectCountries } = this.state;
@@ -110,4 +110,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default SelectionPage;

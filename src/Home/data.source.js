@@ -102,7 +102,7 @@ export const Pricing00DataSource = {
       },
       {
         name: 'button',
-        children: { href: '#', type: 'primary', children: 'find out more' },
+        children: { href: '/se', type: 'primary', children: 'find out more' },
       },
     ],
   },
