@@ -67,14 +67,11 @@ class Home extends Component {
             </div>
             {/*quiz of the calendar*/}
             <div className="quiz-block">
-              <h3>
-                Can you guess which country this festival is celebrated in?
-                Take your pick:
-              </h3>
+              <h3>Quiz</h3>
               <div className="quiz-header">
                 <img width="250" alt ="" src={quizze.img}></img>
                 <div className="quiz-right">
-                  <h5>quizze.quiz</h5>
+                  <h5>{quizze.quiz}</h5>
                   {quizze.option.split(",").map((item, key) => {
                     return (
                       <div key={key} style={{ fontSize: 18 }}>
@@ -102,7 +99,7 @@ class Home extends Component {
                         Why not head to the Diwali celebration near you and learn more about it & at the same time make friends?
                       </div>
                       <div style={{ textAlign: "right", paddingBottom: 100 }}>
-                        <button onClick={}>
+                        <button>
                           Event details
                         </button>
                       </div>
@@ -111,6 +108,33 @@ class Home extends Component {
                 )
               }
               {/*wrong*/}
+              {
+                isResult && value !== quizze.answer && (
+                  <div className="quiz-header" style={{ marginTop: 10 }}>
+                    <div className="quiz-right" style={{ paddingLeft: 10 }}>
+                      <h5 style={{ marginBottom:0, paddingBottom: 0 }}>Oops, you got it wrong!</h5>
+                      <div>
+                        The picture depicts the celebration of an Indian festival named "Diwali".
+                        Why not head to the Diwali celebration near you and learn more about it & at the same time make friends?
+                      </div>
+                      <div style={{ textAlign: "right", paddingBottom: 100 }}>
+                        <button>
+                          Event details
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )
+              }
+              {/*Next quiz*/}
+              <button onClick={() => {
+                this.setState({
+                  index: index + 1,
+                  isResult: false
+                })
+              }} >
+                Try one more!
+              </button>
 
             </div>
           </div>
