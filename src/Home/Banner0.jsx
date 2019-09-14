@@ -31,7 +31,7 @@ class Banner extends React.PureComponent {
             {dataSource.content.children}
           </div>
           <Button ghost key="button" {...dataSource.button}>
-            {dataSource.button.children}
+              <strong>{dataSource.button.children}</strong>
           </Button>
         </QueueAnim>
         <TweenOne
