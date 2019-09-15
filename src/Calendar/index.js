@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Calendar, Badge, Icon, Radio } from "antd";
 import {getEvents, getFestivals, getQuizzes} from "../common/api";
-
+import moment from "moment";
 
 class Home extends Component {
   constructor(props) {
@@ -23,11 +23,13 @@ class Home extends Component {
         event: data.json_list || []
       });
     });
+
     getFestivals().then(({ data }) => {
       this.setState({
         festivals: data.json_list || []
       });
     });
+
     getQuizzes().then(({ data }) => {
       this.setState({
         quizzes: data.json_list || []
@@ -46,7 +48,37 @@ class Home extends Component {
       isResult: true
     });
   };
+  //festival date and event date
+  dateCellRender = value => {
+    const { event, festival } = this.state;
+    const result = event.filter(item => {
+      return moment(item.day).format("YYYYMMDD") === value.format("YYYYMMDD"); //get the event date and set the date format
+    });
+    const festivalsResult = festival.filter(item => {
+      return moment(item.date).format("YYYYMMDD") === value.format("YYYYMMDD");//get the festival date and set the date format
+    });
+    return (
+        <ul>
+          {result.map((item, index) => (
+              <li key={index}>
+                <Badge status="success" text={item.name}></Badge>
+              </li>
+          ))}
+          {festivalsResult.map((item, index) => (
+              <li key={index}>
+                <Badge status="success" text={item.name}></Badge>
+              </li>
+          ))}
+        </ul>
+    );
+  };
+  //show the details of selected date.
+  onSelect = value => {
+    const { event, festivals } = this.state;
+    const result = event.find(item => {
 
+    })
+  }
 
   render() {
     const {currItem, quizzes, value, index, isResult} = this.state;
@@ -135,7 +167,12 @@ class Home extends Component {
               }} >
                 Try one more!
               </button>
+            </div>
 
+            <div className="calendar-row">
+              <div className="calendar-row-item">
+                <Calendar/>
+              </div>
             </div>
           </div>
         </div>
