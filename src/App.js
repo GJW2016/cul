@@ -7,7 +7,7 @@ import Home from './Home';
 import flash from './Flashcard'
 import Analysis from './Analysis'
 import Calendar from "./Calendar";
-import se from './SelectionPage'
+import SelectionPage from './SelectionPage'
 
 import {
   Nav00DataSource,
@@ -40,7 +40,7 @@ class App extends Component {
           <Header dataSource={Nav00DataSource} isMobile={this.isMobile} />
           <Route exact path="/" component={Home} />
           <Route exact path="/calendar" component={Calendar} />
-          <Route exact path="/se" component={se} />
+          <Route exact path="/selectionPage" component={SelectionPage} />
           <Route exact path="/flash" component={flash} />
           <Route exact path="/analysis" component={Analysis} />
           <Footer dataSource={Footer10DataSource} isMobile={this.isMobile} />

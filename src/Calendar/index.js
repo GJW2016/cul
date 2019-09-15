@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Calendar, Badge, Icon, Radio } from "antd";
 import {getEvents, getFestivals, getQuizzes} from "../common/api";
 import moment from "moment";
+import "./index.css"
 
 class Home extends Component {
   constructor(props) {
@@ -58,15 +59,15 @@ class Home extends Component {
       return moment(item.date).format("YYYYMMDD") === value.format("YYYYMMDD");//get the festival date and set the date format
     });
     return (
-        <ul>
+        <ul className="events">
           {result.map((item, index) => (
               <li key={index}>
-                <Badge status="success" text={item.name}></Badge>
+                <Badge status="warning" text={item.name} />
               </li>
           ))}
           {festivalsResult.map((item, index) => (
               <li key={index}>
-                <Badge status="success" text={item.name}></Badge>
+                <Badge status="success" text={item.name} />
               </li>
           ))}
         </ul>
@@ -77,10 +78,10 @@ class Home extends Component {
     const { event, festivals } = this.state;
     const result = event.find(item => {
       return moment(item.day).format("YYYYMMDD") === value.format("YYYYMMDD"); //get the event date and set the date format
-    }) || {};
-    const item = festivals.filter(item => {
+    }) || {name: "No Event in this day" };
+    const item = festivals.find(item => {
       return moment(item.date).format("YYYYMMDD") === value.format("YYYYMMDD");//get the festival date and set the date format
-    }) || { name: "No festival" };
+    }) || { name: "No festival in this day" };
     this.setState({
       currItem: {
         festivalName: item.name,
@@ -101,10 +102,10 @@ class Home extends Component {
     const date = quizze.date;
     const result = event.find(item => {
       return moment(item.day).format("YYYYMMDD") === moment(date).format("YYYYMMDD"); //get the event date and set the date format
-    }) || {};
-    const item = festivals.filter(item => {
+    }) || {name: "No Event in this day"};
+    const item = festivals.find(item => {
       return moment(item.date).format("YYYYMMDD") === moment(date).format("YYYYMMDD");//get the festival date and set the date format
-    }) || { name: "No festival" };
+    }) || { name: "No festival in this day" };
     this.setState({
       currItem: {
         festivalName: item.name,
@@ -140,7 +141,7 @@ class Home extends Component {
             <div className="quiz-block">
               <h3>Quiz</h3>
               <div className="quiz-header">
-                <img width="250" alt ="" src={quizze.img}></img>
+                <img width="600" style={{ height: "100%"}} alt ="" src={quizze.img}></img>
                 <div className="quiz-right">
                   <h5>{quizze.quiz}</h5>
                   {quizze.option.split(",").map((item, key) => {
@@ -164,7 +165,7 @@ class Home extends Component {
                 isResult && value === quizze.answer && (
                   <div className="quiz-header" style={{ marginTop: 10 }}>
                     <div className="quiz-right" style={{ paddingLeft: 10 }}>
-                      <h5 style={{ marginBottom:0, paddingBottom: 0 }}>Yay, you got it right!</h5>
+                      <h5 style={{ marginBottom: 0, paddingBottom: 0 }}>Yay, you got it right!</h5>
                       <div>
                         The picture depicts the celebration of an Indian festival named "Diwali".
                         Why not head to the Diwali celebration near you and learn more about it & at the same time make friends?
@@ -212,32 +213,31 @@ class Home extends Component {
               <div className="calendar-row-item">
                 <Calendar dateCellRender={this.dateCellRender} onSelect={this.onSelect} />
               </div>
+              {/*details of the events*/}
               <div className="calendar-row-item">
                 <h3>
                   {currItem.festivalName}
-                  <Icon onClick={() => {
+                    {/*<Icon onClick={() => {
                     if (currItem.tag_id && currItem.country_id) {
-                      this.props.history.push(`/info?selectTags=${currItem.tag_id}&selectCountries=${currItem.country_id}`)
+                      this.props.history.push(`/flash?selectTags=${currItem.tag_id}&selectCountries=${currItem.country_id}`)
                     }
-                  }} className="icon" type="info-circle"
-                  />
+                  }} className="icon" type="info-circle" />*/}
                 </h3>
-
                 <div className="calendar-row-content">
                   {currItem.eventName && (
-                  <div>
-                    <h4>Event name</h4>
-                    <p>{currItem.eventName}</p>
-                    <h4>Description</h4>
-                    <p>{currItem.desc}</p>
-                    <h4>Date</h4>
-                    <p>{currItem.date}</p>
-                    <h4>Time</h4>
-                    <p>{currItem.time}</p>
-                    <h4>Venue</h4>
-                    <p>{currItem.venue}</p>
-                  </div>
-                )}
+                    <div>
+                      <h4>Event name</h4>
+                      <p>{currItem.eventName}</p>
+                      <h4>Description</h4>
+                      <p>{currItem.desc}</p>
+                      <h4>Date</h4>
+                      <p>{currItem.date}</p>
+                      <h4>Time</h4>
+                      <p>{currItem.time}</p>
+                      <h4>Venue</h4>
+                      <p>{currItem.venue}</p>
+                     </div>
+                  )}
                 </div>
               </div>
             </div>

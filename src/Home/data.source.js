@@ -26,7 +26,7 @@ export const Nav00DataSource = {
         name: 'item1',
         className: 'header0-item',
         children: {
-          href: '/se',
+          href: '/selectionPage',
           children: [{ children: ('Cultural Info'), name: 'text' }],
         },
       },
@@ -102,7 +102,7 @@ export const Pricing00DataSource = {
       },
       {
         name: 'button',
-        children: { href: '/se', type: 'primary', children: 'find out more' },
+        children: { href: '/selectionPage', type: 'primary', children: 'find out more' },
       },
     ],
   },
