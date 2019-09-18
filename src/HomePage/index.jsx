@@ -2,11 +2,18 @@
 /* eslint arrow-parens: 0 */
 import React from 'react';
 import { enquireScreen } from 'enquire-js';
-import Banner0 from './/Banner0';
+
+import Nav0 from './Nav0';
+import Banner0 from './Banner0';
 import Pricing0 from './Pricing0';
+import Footer1 from './Footer1';
+
 import {
+  Nav00DataSource,
   Banner01DataSource,
   Pricing00DataSource,
+  Pricing01DataSource,
+  Footer10DataSource,
 } from './data.source';
 import './less/antMotionStyle.less';
 
@@ -46,6 +53,7 @@ export default class Home extends React.Component {
 
   render() {
     const children = [
+
       <Banner0
         id="Banner0_1"
         key="Banner0_1"
@@ -57,7 +65,13 @@ export default class Home extends React.Component {
         key="Pricing0_0"
         dataSource={Pricing00DataSource}
         isMobile={this.state.isMobile}
-      />
+      />,
+      <Pricing0
+        id="Pricing0_1"
+        key="Pricing0_1"
+        dataSource={Pricing01DataSource}
+        isMobile={this.state.isMobile}
+      />,
     ];
     return (
       <div

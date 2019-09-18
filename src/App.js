@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import { enquireScreen } from 'enquire-js';
-import Header from './Home/Nav0';
-import Footer from './Home/Footer1';
-import Home from './Home';
+import Header from './HomePage/Nav0';
+import Footer from './HomePage/Footer1';
+import Home from './HomePage';
 import flash from './Flashcard'
 import Analysis from './Analysis'
 import Calendar from "./Calendar";
 import SelectionPage from './SelectionPage'
 
+
 import {
   Nav00DataSource,
   Footer10DataSource,
-} from './Home/data.source.js';
+} from './HomePage/data.source.js';
 
 let isMobile;
 enquireScreen((b) => {

@@ -2,7 +2,7 @@ import React from 'react';
 import TweenOne from 'rc-tween-one';
 import { Menu } from 'antd';
 import { getChildrenToRender } from './utils';
-import { Link } from "react-router-dom";
+
 const { Item, SubMenu } = Menu;
 
 class Header extends React.Component {
@@ -24,7 +24,6 @@ class Header extends React.Component {
     const { dataSource, isMobile, ...props } = this.props;
     const { phoneOpen } = this.state;
     const navData = dataSource.Menu.children;
-
     const navChildren = navData.map((item) => {
       const { children: a, subItem, ...itemProps } = item;
       if (subItem) {
@@ -49,14 +48,13 @@ class Header extends React.Component {
                   {childItem.children.map(getChildrenToRender)}
                 </a>
               ) : (
-                <Item {...childItem}>
+                <div {...childItem}>
                   {childItem.children.map(getChildrenToRender)}
-                </Item>
+                </div>
               );
               return (
                 <Item key={$item.name || ii.toString()} {...$item}>
-                   {child}
-
+                  {child}
                 </Item>
               );
             })}
@@ -87,9 +85,7 @@ class Header extends React.Component {
             animation={{ x: -30, type: 'from', ease: 'easeOutQuad' }}
             {...dataSource.logo}
           >
-            <a href={dataSource.logo.children.target}>
             <img width="100%" src={dataSource.logo.children.pic} alt="img" />
-            </a>
           </TweenOne>
           {isMobile && (
             <div

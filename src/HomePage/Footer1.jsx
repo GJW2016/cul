@@ -1,4 +1,4 @@
- import React from 'react';
+import React from 'react';
 import TweenOne from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import QueueAnim from 'rc-queue-anim';
@@ -6,7 +6,6 @@ import { Row, Col } from 'antd';
 import { getChildrenToRender } from './utils';
 import { isImg } from './utils';
 
-//render child component
 class Footer extends React.Component {
   static defaultProps = {
     className: 'footer1',

@@ -2,7 +2,6 @@ import React from 'react';
 import { Button, Icon } from 'antd';
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
-import Img from '../Website_logo.png'
 import { isImg } from './utils';
 
 class Banner extends React.PureComponent {
@@ -31,7 +30,7 @@ class Banner extends React.PureComponent {
             {dataSource.content.children}
           </div>
           <Button ghost key="button" {...dataSource.button}>
-              <strong>{dataSource.button.children}</strong>
+            {dataSource.button.children}
           </Button>
         </QueueAnim>
         <TweenOne

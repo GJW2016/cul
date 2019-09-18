@@ -1,6 +1,6 @@
 import React from 'react';
 
-//layout of the page
+
 export const Nav00DataSource = {
   wrapper: { className: 'header0 home-page-wrapper' },
   page: { className: 'home-page' },
@@ -19,7 +19,7 @@ export const Nav00DataSource = {
         className: 'header0-item',
         children: {
           href: '/',
-          children: [{ children:'Home', name: 'text' }],
+          children: [{ children: 'Home', name: 'text' }],
         },
       },
       {
@@ -27,15 +27,15 @@ export const Nav00DataSource = {
         className: 'header0-item',
         children: {
           href: '/selectionPage',
-          children: [{ children: ('Cultural Info'), name: 'text' }],
+          children: [{ children: 'Cultural Info', name: 'text' }],
         },
       },
       {
-      name: 'item2',
-      className: 'header0-item',
-      children: {
-        href: '/calendar',
-        children: [{ children: ('Festival calendar'), name: 'text' }],
+        name: 'item2',
+        className: 'header0-item',
+        children: {
+          href: '/calendar',
+          children: [{ children: ('Festival calendar'), name: 'text' }],
         },
       },
     ],
@@ -60,17 +60,56 @@ export const Banner01DataSource = {
   button: {
     className: 'banner0-button',
     href:'/analysis',
-    children: 'learn more',
-  },
+    children: (<strong>learn more</strong>), },
 };
 export const Pricing00DataSource = {
   wrapper: { className: 'home-page-wrapper pricing0-wrapper' },
   OverPack: { playScale: 0.3, className: 'home-page pricing0' },
-  imgWrapper: { className: 'pricing0-img-wrapper', md: 12, xs: 20 },
+  imgWrapper: { className: 'pricing0-img-wrapper', md: 12, xs: 24 },
   img: {
     className: 'pricing0-img',
     name: 'image',
-    children: 'https://www.culturallydiversity.tk/images/home/home_1.jpg',
+    children:
+      'https://www.culturallydiversity.tk/images/home/home_1.jpg',
+  },
+  childWrapper: {
+    className: 'pricing0-text-wrapper',
+    md: 12,
+    xs: 24,
+    children: [
+
+      {
+        name: 'content',
+        children:(
+            <h2>
+              <br />
+              <br />
+              We understand that it get difficult to make friends with people from different background. But guess what?
+              <br />
+              All of us love food and enjoy festivals irrespective of what country we are from. Thus, being a great conversation starter!
+              <br />
+              <br />
+              <br />
+            </h2>
+        ),
+        className: 'pricing0-content',
+      },
+      {
+        name: 'button',
+        children: { href: '/selectionPage', type: 'primary', children: 'Find out more' },
+      },
+    ],
+  },
+};
+export const Pricing01DataSource = {
+  wrapper: { className: 'home-page-wrapper pricing0-wrapper' },
+  OverPack: { playScale: 0.3, className: 'home-page pricing0' },
+  imgWrapper: { className: 'pricing0-img-wrapper', md: 12, xs: 24 },
+  img: {
+    className: 'pricing0-img',
+    name: 'image',
+    children:
+      'https://www.culturallydiversity.tk/images/tags/fes.jpg',
   },
   childWrapper: {
     className: 'pricing0-text-wrapper',
@@ -78,31 +117,27 @@ export const Pricing00DataSource = {
     xs: 24,
     children: [
       {
-        name: 'title',
-        children: (<h2>What we offer</h2>),
-        className: 'pricing0-title',
-      },
-      {
         name: 'content',
-        children:(
-
-            <h3>
-              We understand that it get difficult to make friends with people from different background. But guess what?
+        children:
+          (
+            <h2>
               <br />
-              All of us love food and enjoy festivals irrespective of what country we are from. Thus, being a great converstion starter!
               <br />
-              Our website is specifically focused on China, India, Nepal and Australia (of course!).
-              <br />
+              Shifting to a completely different country may make you feeling blue and home-sick.
+              Step out of your house and explore the cultural events happening in Melbourne.
               <br />
               <br />
               <br />
-            </h3>
-        ),
-        className: 'pricing0-content',
+            </h2>
+        ),className: 'pricing0-content',
       },
       {
         name: 'button',
-        children: { href: '/selectionPage', type: 'primary', children: 'find out more' },
+        children: {
+          href: '/calendar',
+          type: 'primary',
+          children: 'Find out more',
+        },
       },
     ],
   },
