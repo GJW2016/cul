@@ -78,7 +78,11 @@ class Home extends Component {
     const { event, festivals } = this.state;
     const result = event.find(item => {
       return moment(item.day).format("YYYYMMDD") === value.format("YYYYMMDD"); //get the event date and set the date format
-    }) || {name: "No Event in this day" };
+    }) || {name: "No Event in this day",
+            des: "No Event in this day",
+           day: "No Event in this day",
+           time: "No Event in this day",
+            loc: "No Event in this day" };
     const item = festivals.find(item => {
       return moment(item.date).format("YYYYMMDD") === value.format("YYYYMMDD");//get the festival date and set the date format
     }) || { name: "No festival in this day" };
@@ -102,7 +106,11 @@ class Home extends Component {
     const date = quizze.date;
     const result = event.find(item => {
       return moment(item.day).format("YYYYMMDD") === moment(date).format("YYYYMMDD"); //get the event date and set the date format
-    }) || {name: "No Event in this day"};
+    }) || {name: "No Event in this day",
+            des: "No Event in this day",
+           day: "No Event in this day",
+           time: "No Event in this day",
+            loc: "No Event in this day"};
     const item = festivals.find(item => {
       return moment(item.date).format("YYYYMMDD") === moment(date).format("YYYYMMDD");//get the festival date and set the date format
     }) || { name: "No festival in this day" };
@@ -138,14 +146,17 @@ class Home extends Component {
             </div>
             {/*quiz of the calendar*/}
             <div className="quiz-block">
-              <h3>Quiz</h3>
+              <div>
+                <h3>Trivia Time!</h3>
+                <h4>Play a fun trivia game to check how well you know about the festivals celebrated by your friends coming from different parts of the world.</h4>
+              </div>
               <div className="quiz-header">
-                <img width="600" style={{ height: "100%"}} alt ="" src={quizze.img}></img>
+                <img width="500" style={{ height: "100%"}} alt ="" src={quizze.img}></img>
                 <div className="quiz-right">
                   <h5>{quizze.quiz}</h5>
                   {quizze.option.split(",").map((item, key) => {
                     return (
-                      <div key={key} style={{ fontSize: 18 }}>
+                      <div key={key} style={{ fontSize: 24 }}>
                         <Radio checked={value === item} onChange={ () => this.onRadioChange(item)} style={{marginRight: 10}}>
                           {item}
                         </Radio>
@@ -153,6 +164,7 @@ class Home extends Component {
                     );
                   })}
                   {/*submit button*/}
+                  <p><br/><br/></p>
                   <button className="app-button" onClick={this.onResultSubmit} style={{marginTop: 10}}>
                     Submit
                   </button>
@@ -166,12 +178,11 @@ class Home extends Component {
                     <div className="quiz-right" style={{ paddingLeft: 10 }}>
                       <h5 style={{ marginBottom: 0, paddingBottom: 0 }}>Yay, you got it right!</h5>
                       <div>
-                        The picture depicts the celebration of an Indian festival named "Diwali".
-                        Why not head to the Diwali celebration near you and learn more about it & at the same time make friends?
+                        Why not head to celebration near you and learn more about it & at the same time make friends?
                       </div>
                       <div style={{ textAlign: "right", paddingBottom: 100 }}>
                         <button className="app-button" onClick={this.onSelectCurrItem}>
-                          Event details
+                          Event Details
                         </button>
                       </div>
                     </div>
@@ -185,12 +196,11 @@ class Home extends Component {
                     <div className="quiz-right" style={{ paddingLeft: 10 }}>
                       <h5 style={{ marginBottom:0, paddingBottom: 0 }}>Oops, you got it wrong!</h5>
                       <div>
-                        The picture depicts the celebration of an Indian festival named "Diwali".
-                        Why not head to the Diwali celebration near you and learn more about it & at the same time make friends?
+                        Try again! Giving away the answer makes it too easy doesn't it?
                       </div>
                       <div style={{ textAlign: "right", paddingBottom: 100 }}>
                         <button className="app-button" onClick={this.onSelectCurrItem}>
-                          Event details
+                          Event Details
                         </button>
                       </div>
                     </div>
@@ -210,6 +220,12 @@ class Home extends Component {
               {/*Calendar*/}
             <div className="calendar-row">
               <div className="calendar-row-item">
+                <div className="calendar-symbol">
+                  <div>
+                    <img width="20" src={"https://www.culturallydiversity.tk/images/calendar/red.png"} alt="" />Festival
+                    <img width="20" src={"https://www.culturallydiversity.tk/images/calendar/green.png"} alt="" />AvailableEvents
+                  </div>
+                </div>
                 <Calendar dateCellRender={this.dateCellRender} onSelect={this.onSelect} />
               </div>
               {/*details of the events*/}
