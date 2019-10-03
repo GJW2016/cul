@@ -222,8 +222,8 @@ class Home extends Component {
               <div className="calendar-row-item">
                 <div className="calendar-symbol">
                   <div>
-                    <img width="20" src={"https://www.culturallydiversity.tk/images/calendar/red.png"} alt="" />Festival
-                    <img width="20" src={"https://www.culturallydiversity.tk/images/calendar/green.png"} alt="" />AvailableEvents
+                    <img width="20" src={"https://www.culturallydiversity.tk/images/calendar/red.png"} alt="" />AvailableEvents
+                    <img width="20" src={"https://www.culturallydiversity.tk/images/calendar/green.png"} alt="" />Festival
                   </div>
                 </div>
                 <Calendar dateCellRender={this.dateCellRender} onSelect={this.onSelect} />
