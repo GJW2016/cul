@@ -9,6 +9,7 @@ import Analysis from './Analysis'
 import Calendar from "./Calendar";
 import SelectionPage from './SelectionPage'
 import SimpleMap from './Map'
+import Foodie from './Foodie'
 
 import {
   Nav00DataSource,
@@ -45,6 +46,7 @@ class App extends Component {
           <Route exact path="/flash" component={flash} />
           <Route exact path="/SimpleMap" component={SimpleMap} />
           <Route exact path="/analysis" component={Analysis} />
+          <Route exact path="/foodie" component={Foodie} />
           <Footer dataSource={Footer10DataSource} isMobile={this.isMobile} />
         </div>
       </Router>
