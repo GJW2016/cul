@@ -1,4 +1,11 @@
-.title1 title2{
+.home {
+    max-width: 1368px;
+    matgin: 0 auto;
+    height: 100%;
+    overflow-y: auto;
+}
+.title1,
+.title2{
     height: 100%;
     background: url('https://www.culturallydiversity.tk/images/iter3/back1.jpg') no-repeat center center;
     background-size: cover;
@@ -26,9 +33,75 @@
 .title2 {
     background: url("https://www.culturallydiversity.tk/images/iter3/back2.jpg") no-repeat center center;
 }
-.scroll {
-    max-width: 1368px;
-    matgin: 0 auto;
+
+.select{
     height: 100%;
-    overflow-y: auto;
+    color: #fff;
+    padding: 50px 30px;
+    padding-top: 150px;
+    background-color: #70554b;
+}
+.select h2{
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.select h3{
+    font-size: 22px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.flex-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 700px;
+    margin: 0 auto;
+    font-size: 22px;
+}
+.slect-item{
+    padding: 15px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: #897168;
+    width: 230px;
+    height: 250px;
+    color: #fff;
+}
+.slect-item h4{
+    color: #fff;
+    text-align: center;
+    height: 60px;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+.slect-item img{
+    width: 140px;
+    height: 140px;
+    display: block;
+    margin: 0 auto;
+}
+.arrow-down{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 60px;
+    color: #fff;
+    padding: 2px;
+    background-color: #70554b;
+    text-align: center;
+    background: linear-gradient(#897168 70%, #fff);
+    font-size: 12px;
+    z-index: 99;
+    padding-bottom: 20px;
+    border:1px solid #70554b;
+    cursor: pointer;
+    -webkit-user-select: none;
+}
+.arrow-down div {
+    text-align: center;
+    color: #fff;
+    line-height: 1;
 }
