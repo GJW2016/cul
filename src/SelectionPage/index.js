@@ -46,7 +46,7 @@ class SelectionPage extends Component {
   onClick = () => {
     const { selectTags, selectCountries } = this.state;
     if (!selectTags.length || !selectCountries.length) {
-      return alert("Please choose");
+      return alert("please select at least one country and one topic");
     }
     this.props.history.push(`/flash?selectTags=${selectTags.join(",")}&selectCountries=${selectCountries.join(",")}`);
   };
@@ -72,7 +72,7 @@ class SelectionPage extends Component {
                 return (
                   <Col span={12} key={item.id}>
                     <div className="block-wrap" style={{ paddingRight: 20 }}>
-                      <Checkbox checked={selectCountries.includes(item.id)} style={{ marginTop: 105 }} onChange={e => this.onChange(e, "selectCountries", item.id)}></Checkbox>
+                      <Checkbox checked={selectCountries.includes(item.id)} style={{ marginTop: 70, zoom: 1.5 }} onChange={e => this.onChange(e, "selectCountries", item.id)}></Checkbox>
                       <div className="block-content">
                         <img style={{ width: "100%", height: 220 }} src={item.img} alt=""></img>
                         <h4 style={{ textAlign: "center", fontSize: 18, fontWeight: 700, lineHeight: 2 }}>{item.name}</h4>
@@ -90,7 +90,7 @@ class SelectionPage extends Component {
                 return (
                   <Col span={12} key={item.id} style={{ paddingRight: 20 }}>
                     <div className="block-wrap">
-                      <Checkbox checked={selectTags.includes(item.id)} style={{ marginTop: 105 }} onChange={e => this.onChange(e, "selectTags", item.id)}></Checkbox>
+                      <Checkbox checked={selectTags.includes(item.id)} style={{ marginTop: 70, zoom: 1.5 }} onChange={e => this.onChange(e, "selectTags", item.id)}></Checkbox>
                       <div className="block-content">
                         <img style={{ width: "100%", height: 220 }} src={item.img} alt=""></img>
                         <h4 style={{ textAlign: "center", fontSize: 18, fontWeight: 700, lineHeight: 2 }}>{item.name}</h4>

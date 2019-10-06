@@ -175,34 +175,6 @@ export const Footer10DataSource = {
           ],
         },
       },
-      {
-        name: 'block2',
-        xs: 24,
-        md: 6,
-        className: 'block',
-        title: {
-          children: (
-            <>
-              <p>About us</p>
-            </>
-          ),
-        },
-        childWrapper: {
-          children: [
-            { href: '#', name: 'link0', children: '' },//FAQ
-            {
-              href: '#',
-              name: 'link1',
-              children: (
-                <>
-                  <p>Contact us: B16 Invincible</p>
-                  <p>jguo0021@student.monash.edu</p>
-                </>
-              ),
-            },
-          ],
-        },
-      },
     ],
   },
   copyrightWrapper: { className: 'copyright-wrapper' },

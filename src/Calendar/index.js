@@ -157,7 +157,7 @@ class Home extends Component {
                   {quizze.option.split(",").map((item, key) => {
                     return (
                       <div key={key} style={{ fontSize: 24 }}>
-                        <Radio checked={value === item} onChange={ () => this.onRadioChange(item)} style={{marginRight: 10}}>
+                        <Radio checked={value === item} onChange={ () => {this.setState({isResult: false}); this.onRadioChange(item)}} style={{marginRight: 10}}>
                           {item}
                         </Radio>
                       </div>
