@@ -1,0 +1,49 @@
+.menu {
+  height: 100%;
+  background: url("https://www.culturallydiversity.tk/images/iter3/back3.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 50px 30px;
+  position: relative;
+  overflow-y: auto;
+}
+.menu-header{
+    width: 960px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 10px rgba(0,0,0,.05);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    min-height: 200px;
+    margin-bottom: 30px;
+}
+.choose{
+    width: 960px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 10px rgba(0,0,0,.05);
+    padding: 20px;
+}
+.choose-head{
+    height: 130px;
+    background: url("https://www.culturallydiversity.tk/images/iter3/pic2.jpg") no-repeat center center;
+    background-size: cover;
+}
+.choose-head h3{
+    text-align: center;
+    font-size: 32px;
+}
+.choose-head select{
+    line-height: 40px;
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+    height: 40px;
+}
+.menu-header img{
+    height: auto;
+    width: 130px;
+}
