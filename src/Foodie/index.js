@@ -5,22 +5,29 @@ import "./index.css"
 class Foodie extends Component{
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+        height:500
+    };
   }
 
-  componentWillMount() {}
+  componentWillMount() {
+    this.setState({
+      height: window.screen.height
+    })
+  }
   nextPage = () => {
     document.getElementById("scroll").scrollTop = 100000;
   };
 
   render() {
+    const {height} = this.state
     return (
       <div id="scroll" className="home">
         <div onClick={this.nextPage} className="arrow-down">
           <div>keep scrolling to find a way to curb your hunger</div>
           <Icon type="arrow-down" style={{ fontSize: 20, color: "#fff" }}></Icon>
         </div>
-        <div className="title1">
+        <div className="title1" style={{height:height}}>
           <div className="title1-context">
             <h3>Are you a Foodie?</h3>
             <p>
@@ -31,8 +38,8 @@ class Foodie extends Component{
             </p>
           </div>
         </div>
-        <div className="title1 title2">
-          <div className="title1-context" style={{ left: 30 }}>
+        <div className="title1 title2" style={{height:height}}>
+          <div className="title1-context" style={{ left : 30 }}>
             <h3>Are you a Foodie?</h3>
             <p>
               Food is an integral part of people's lives, and is much more than just a means of survival. Coming to Melbourne, one might be easily become overwhelmed by the enormous choices of food.
@@ -42,7 +49,7 @@ class Foodie extends Component{
             </p>
           </div>
         </div>
-        <div className="select">
+        <div className="select" style={{height:height}}>
           <h3>title</h3>
           <h2>Make your choice</h2>
           <div className="flex-block">
