@@ -2,32 +2,33 @@ import axios from 'axios';
 
 //data APIs
 function getCountries() {
-    return axios.get('https://www.culturallydiversity.tk/countries');
+    return axios.get('https://www.c-diversity.social/countries');
 }
 export {getCountries};
 
 
 function getTags() {
-    return axios.get('https://www.culturallydiversity.tk/tags');
+    return axios.get('https://www.c-diversity.social/tags');
 }
 export {getTags};
 
 function getContents() {
-    return axios.get('https://www.culturallydiversity.tk/contents');
+    return axios.get('https://www.c-diversity.social/contents');
 }
 export {getContents};
 
 function getEvents() {
-    return axios.get('https://www.culturallydiversity.tk/events');
+    return axios.get('https://www.c-diversity.social/events');
 }
 export {getEvents};
 
 function getFestivals() {
-    return axios.get('https://www.culturallydiversity.tk/festivals');
+    return axios.get('https://www.c-diversity.social/festivals');
 }
 export {getFestivals};
 
 
 export function getQuizzes() {
-  return axios.get("https://www.culturallydiversity.tk/quizzes");
+  return axios.get("https://www.c-diversity.social/quizzes");
 }
+

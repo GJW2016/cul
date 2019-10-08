@@ -21,7 +21,7 @@ class Menu extends Component {
       <div className="menu" style={{ height }}>
         <div className="menu-header">
           <div>Cook at home</div>
-          <img src="https://www.culturallydiversity.tk/images/iter3/pic1.png" alt=""></img>
+          <img src="https://www.c-diversity.social/images/iter3/pic1.png" alt=""></img>
         </div>
         {/*  */}
         <div className="choose">

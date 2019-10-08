@@ -8,7 +8,7 @@ export const Nav00DataSource = {
     className: 'header0-logo',
     children:{
           target: '/',
-          pic : 'https://www.culturallydiversity.tk/images/small_logo.png'
+          pic : 'https://www.c-diversity.social/images/small_logo.png'
     }
   },
   Menu: {
@@ -47,7 +47,7 @@ export const Banner01DataSource = {
   textWrapper: { className: 'banner0-text-wrapper' },
   title: {
     className: 'banner0-title',
-    children: 'https://www.culturallydiversity.tk/images/big_logo.png',
+    children: 'https://www.c-diversity.social/images/big_logo.png',
   },
   content: {
     className: 'banner0-content',
@@ -70,7 +70,7 @@ export const Pricing00DataSource = {
     className: 'pricing0-img',
     name: 'image',
     children:
-      'https://www.culturallydiversity.tk/images/home/home_1.jpg',
+      'https://www.c-diversity.social/images/home/home_1.jpg',
   },
   childWrapper: {
     className: 'pricing0-text-wrapper',
@@ -109,7 +109,7 @@ export const Pricing01DataSource = {
     className: 'pricing0-img',
     name: 'image',
     children:
-      'https://www.culturallydiversity.tk/images/tags/fes.jpg',
+      'https://www.c-diversity.social/images/tags/fes.jpg',
   },
   childWrapper: {
     className: 'pricing0-text-wrapper',
@@ -157,7 +157,7 @@ export const Footer10DataSource = {
         title: {
           className: 'logo',
           children:
-            'https://www.culturallydiversity.tk/images/small_logo.png',
+            'https://www.c-diversity.social/images/small_logo.png',
         },
         childWrapper: {
           className: 'slogan',
@@ -184,7 +184,7 @@ export const Footer10DataSource = {
     children: (
       <>
         <span>
-          ©2019 by <a href="https://www.culturallydiversity.tk/">B16</a> All Rights
+          ©2019 by <a href="https://www.c-diversity.social/">B16</a> All Rights
           Reserved
         </span>
       </>

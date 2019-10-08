@@ -55,12 +55,12 @@ class Foodie extends Component{
           <div className="flex-block">
             <div className="slect-item">
               <h4>Cook at home</h4>
-              <img src="https://www.culturallydiversity.tk/images/iter3/food.jpg" alt=""></img>
+              <img src="https://www.c-diversity.social/images/iter3/food.jpg" alt=""></img>
             </div>
             <span>OR</span>
             <div className="slect-item">
               <h4>Find a budget friendly restaurant</h4>
-              <img src="https://www.culturallydiversity.tk/images/iter3/restaurant.jpg" alt=""></img>
+              <img src="https://www.c-diversity.social/images/iter3/restaurant.jpg" alt=""></img>
             </div>
           </div>
         </div>

@@ -61,7 +61,7 @@ class SelectionPage extends Component {
             <br />
             We have an assortment of really interesting flashcards that will help you get well acquainted with the cultures of the people around you.
           </p>
-          <img src="https://www.culturallydiversity.tk/images/title.png" alt=""></img>
+          <img src="https://www.c-diversity.social/images/title.png" alt=""></img>
         </div>
         {/*  */}
         <Row gutter={32} className="home-row">

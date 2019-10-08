@@ -16,7 +16,7 @@ export const Teams00DataSource = {
             {
               name: 'image',
               children:
-                'https://www.culturallydiversity.tk/images/analysis1.png',
+                'https://www.c-diversity.social/images/analysis1.png',
               className: 'teams0-image jzsmgidtjnt-editor_css',
             },
             {
@@ -51,7 +51,7 @@ International student increasing 11.8% compare to 2017 and reach 28% in total en
             {
               name: 'image',
               children:
-                'https://www.culturallydiversity.tk/images/analysis2.png',
+                'https://www.c-diversity.social/images/analysis2.png',
               className: 'teams0-image jzsmgidtjnt-editor_css',
             },
             {

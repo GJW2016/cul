@@ -142,7 +142,7 @@ class Home extends Component {
                 New in Melbourne? Curb your home-sickness and get out of your house and make new friends with the locals by going to different festival events some of which could also be the ones you celebrated back home. Check out the highlighted dates on our calendar and find out when and where these festivals are held and just take your friends to such events so that you can feel at home even though your miles away from your family. Make Melbourne your newest home by befriending with the locals and sharing your experiences to them.
                 </p>
               </div>
-              <img width="250" src={"https://www.culturallydiversity.tk/images/calendar/festive.jpg"} alt="" />
+              <img width="250" src={"https://www.c-diversity.social/images/calendar/festive.jpg"} alt="" />
             </div>
             {/*quiz of the calendar*/}
             <div className="quiz-block">
@@ -222,8 +222,8 @@ class Home extends Component {
               <div className="calendar-row-item">
                 <div className="calendar-symbol">
                   <div>
-                    <img width="20" src={"https://www.culturallydiversity.tk/images/calendar/red.png"} alt="" />AvailableEvents
-                    <img width="20" src={"https://www.culturallydiversity.tk/images/calendar/green.png"} alt="" />Festival
+                    <img width="20" src={"https://www.c-diversity.social/images/calendar/red.png"} alt="" />AvailableEvents
+                    <img width="20" src={"https://www.c-diversity.social/images/calendar/green.png"} alt="" />Festival
                   </div>
                 </div>
                 <Calendar dateCellRender={this.dateCellRender} onSelect={this.onSelect} />
