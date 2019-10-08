@@ -38,6 +38,14 @@ export const Nav00DataSource = {
           children: [{ children: ('Festival calendar'), name: 'text' }],
         },
       },
+      {
+        name: 'item3',
+        className: 'header0-item',
+        children: {
+          href: '/foodie',
+          children: [{ children: ('Foodie'), name: 'text' }],
+        },
+      },
     ],
   },
   mobileMenu: { className: 'header0-mobile-menu' },

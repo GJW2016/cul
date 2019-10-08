@@ -32,3 +32,6 @@ export function getQuizzes() {
   return axios.get("https://www.c-diversity.social/quizzes");
 }
 
+export function getRecipes() {
+  return axios.get("https://www.c-diversity.social/recipes");
+}
