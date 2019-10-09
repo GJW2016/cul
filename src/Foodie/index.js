@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import { Icon } from "antd";
 import "./index.css"
-import Header from "../HomePage/Nav0";
-import Footer from "../HomePage/Footer1";
-import { Nav00DataSource, Footer10DataSource } from "../HomePage/data.source.js";
 
 class Foodie extends Component{
   constructor(props) {
@@ -24,11 +21,13 @@ class Foodie extends Component{
   onLeftClick = () => {
     this.props.history.push("/recipe");
   };
+  onRightClick = () => {
+    this.props.history.push("/map");
+  };
   render() {
-    const {height} = this.state
+    const {height} = this.state;
     return (
       <div id="scroll" className="home1">
-        <Header dataSource={Nav00DataSource} isMobile={this.isMobile} />
         <div onClick={this.nextPage} className="arrow-down">
           <div>keep scrolling to find a way to curb your hunger</div>
           <Icon type="arrow-down" style={{ fontSize: 20, color: "#fff" }}></Icon>
@@ -44,16 +43,19 @@ class Foodie extends Component{
             </p>
           </div>
         </div>
-        <div className="title1 title2" style={{height:height}}>
-          <div className="title1-context" style={{ left : 0,top:50, height:700, bottom: 'auto' }}>
-            <p>
+        <div className="title1 title2" style={{height:969}}>
+          <div className="title1-context" style={{ left : 0, top:50, height:700, bottom: 'auto',marginTop: 50}}>
+            <p style={{marginTop:30}}>
             Since Melbourne is a multicultural city, the culture of food also indicates this characteristic. Which means restaurants with different cultural backgrounds could locate in several major commercial streets and shopping center. On the other hand, since some habitats with same cultural background tend to live in the same district in Melbourne, restaurants from these countries will also located in these districts.
             Moreover, in some home parties or community activities, home-made food from different countries can also be one necessary part. In these activities, people can just enjoy different styles of food, which is a integral part in everyone’s daily life.
             Since food can be a crucial means of communication, it also can be found that most young generation in Melbourne often socialize over food in restaurants of varied cuisines. Thus we take the initiative to make food easily accessible and not a financial burden on the international students by offering two options that will ease making the meal choices everyday.
             </p>
           </div>
         </div>
-        <div className="select" style={{height:height}}>
+        <div className="select">
+          <div style={{marginRight: 90, textAlign: "right"}}>
+            <img width="200" height="200"  src="https://www.c-diversity.social/images/iter3/chat.PNG" alt=""></img>
+          </div>
           <h3>Being new to Melbourne, it gets difficult to find the food that matches the taste of one's home country. So here is your two options to fill up your stomach!</h3>
           <h2>Make your choice</h2>
           <div className="flex-block">
@@ -62,13 +64,12 @@ class Foodie extends Component{
               <img width="300" height="300" src="https://www.c-diversity.social/images/iter3/food.jpg" alt=""></img>
             </div>
             <span>OR</span>
-            <div className="slect-item">
+            <div className="slect-item" onClick={this.onRightClick}>
               <h4>Find a budget friendly restaurant</h4>
               <img width="300" height="300" src="https://www.c-diversity.social/images/iter3/restaurant.jpg" alt=""></img>
             </div>
           </div>
         </div>
-        <Footer dataSource={Footer10DataSource} isMobile={this.isMobile} />
       </div>
     );
   }

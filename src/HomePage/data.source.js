@@ -150,6 +150,46 @@ export const Pricing01DataSource = {
     ],
   },
 };
+export const Pricing02DataSource = {
+  wrapper: { className: 'home-page-wrapper pricing0-wrapper' },
+  OverPack: { playScale: 0.3, className: 'home-page pricing0' },
+  imgWrapper: { className: 'pricing0-img-wrapper', md: 12, xs: 24 },
+  img: {
+    className: 'pricing0-img',
+    name: 'image',
+    children:
+      'https://www.c-diversity.social/images/food.jpg',
+  },
+  childWrapper: {
+    className: 'pricing0-text-wrapper',
+    md: 12,
+    xs: 24,
+    children: [
+      {
+        name: 'content',
+        children:
+          (
+            <h2>
+              <br />
+              <br />
+              Melbourne has one of the biggest assortments of cuisines in the world. Living alone can cause making decisions as simple as food a difficult task. Why not explore the options that you get living in a multicultural society?
+              <br />
+              <br />
+              <br />
+            </h2>
+        ),className: 'pricing0-content',
+      },
+      {
+        name: 'button',
+        children: {
+          href: '/foodie',
+          type: 'primary',
+          children: 'Find out more',
+        },
+      },
+    ],
+  },
+};
 export const Footer10DataSource = {
   wrapper: { className: 'home-page-wrapper footer1-wrapper' },
   OverPack: { className: 'footer1', playScale: 0.2 },

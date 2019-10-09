@@ -27,7 +27,6 @@ function getFestivals() {
 }
 export {getFestivals};
 
-
 export function getQuizzes() {
   return axios.get("https://www.c-diversity.social/quizzes");
 }

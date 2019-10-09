@@ -15,9 +15,11 @@
     padding: 20px;
     display: flex;
     justify-content: space-between;
-    font-size: 30px;
+    font-size: 32px;
+    font-family: Satisfy;
     min-height: 200px;
     margin-bottom: 30px;
+    font-family: Snell Roundhand, cursive;
 }
 .choose{
     width: 960px;
@@ -35,6 +37,8 @@
 .choose-head h3{
     text-align: center;
     font-size: 32px;
+    font-family: Snell Roundhand, cursive;
+    margin-bottom:  20px;
 }
 .choose-head select{
     line-height: 40px;
@@ -44,8 +48,8 @@
     height: 40px;
 }
 .menu-header img{
-    height: 100px;
-    width: 130px;
+    height: 250px;
+    width: 250px;
 }
 .choose-body {
   background-color: #fff;

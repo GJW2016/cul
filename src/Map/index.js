@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 import "./index.css";
 import { getRestaurants } from "../common/api";
+
+
 const Country = ["Australian", "Chinese", "Indian", "Nepalese"];
 const Ratings = [1, 2, 3, 4, 5];
-
 const K_SIZE = 40;
 const greatPlaceStyle = {
   position: "absolute",
@@ -81,16 +82,27 @@ class Map extends Component {
       item: item || {}
     });
   };
+  onClick = () => {
+    this.props.history.push("/foodie");
+  };
   render() {
     const data = this.getFilterData();
     return (
       <div className="map" style={{ height: "100%", width: "100%", paddingTop: 50 }}>
+        <div className="map-block">
+          <strong>
+          <h3>Grab a bite!</h3>
+          <p>
+            No time to cook? Not a problem. Here is a perfectly curated range of amazing places to eat which are completely budget friendly. The suggested restaurants are tailored to a global taste with various choices of cuisines to choose from and the restaurant ratings. So why wait? Gather your friends and hop on to the restaurants near you and have a feast without burning a hole in your pocket!
+          </p>
+          </strong>
+        </div>
         <div className="map-header">
-          <h3>Find a nestaunant tailamed to your chavings</h3>
+          <h3>Find a restaurant tailored to your cravings</h3>
           <div className="select-wrap">
             <select value={this.state.country} onChange={e => this.setState({ country: e.target.value })}>
               <option value={-1} key="all">
-                all
+                Select a cuisine
               </option>
               {Country.map((item, index) => {
                 return (
@@ -102,7 +114,7 @@ class Map extends Component {
             </select>
             <select value={this.state.rating} onChange={e => this.setState({ rating: Number(e.target.value) })}>
               <option value={-1} key="all">
-                all
+                Rating
               </option>
               {Ratings.map((item, index) => {
                 return (
@@ -114,26 +126,31 @@ class Map extends Component {
             </select>
           </div>
         </div>
-        <div style={{ width: "80%", height: 600, margin: "0 auto", marginTop: 30 }}>
+        <div style={{ width: "70%", height: 600, margin: "0 auto", marginTop: 30 }}>
           <GoogleMapReact onChildClick={this._onChildClick} bootstrapURLKeys={{ key: "AIzaSyDjQTLkPlplw6k-1peUtLcIvXU5IW_ArwI" }} defaultCenter={this.props.center} defaultZoom={this.props.zoom}>
             {data.map(item => {
               return <AnyReactComponent lat={Number(item.latitude)} lng={Number(item.longitude)} text={item.name} key={item.id} />;
             })}
           </GoogleMapReact>
         </div>
-        <div style={{ width: "80%", padding: 30, margin: "0 auto", marginTop: 30, backgroundColor: "#fff" }}>
-          <h3 style={{ textAlign: "center", fontSize: 22 }}>Restauant details</h3>
+        <div style={{ width: "70%", padding: 30, margin: "0 auto", marginTop: 30, backgroundColor: "#fff", marginBottom: 30, fontFamily: "Snell Roundhand, cursive"}}>
+          <h2 style={{ textAlign: "center", fontSize: 30 }}>Restaurant details</h2>
           <div>
-            <h4 style={{ textAlign: "center" }}>Name</h4>
-            <div style={{ fontSize: 16, textAlign: "center" }}>{this.state.item.name}</div>
+            <h2 style={{ textAlign: "left" }}>Name:</h2>
+            <div style={{ fontSize: 20, textAlign: "left" }}>{this.state.item.name}</div>
           </div>
           <div>
-            <h4 style={{ textAlign: "center" }}>Address</h4>
-            <div style={{ fontSize: 16, textAlign: "center" }}>{this.state.item.address}</div>
+            <h2 style={{ textAlign: "left" }}>Address:</h2>
+            <div style={{ fontSize: 20, textAlign: "left" }}>{this.state.item.address}</div>
           </div>
           <div>
-            <h4 style={{ textAlign: "center" }}>Opening hours</h4>
-            <div style={{ whiteSpace: "pre-wrap" }} dangerouslySetInnerHTML={{ __html: this.state.item.timings }} style={{ fontSize: 16, textAlign: "center" }}></div>
+            <h2 style={{ textAlign: "left" }}>Opening hours:</h2>
+            <div style={{ whiteSpace: "pre-wrap", fontSize: 20, textAlign: "left" }} dangerouslySetInnerHTML={{ __html: this.state.item.timings }}></div>
+          </div>
+          <div style={{textAlign: "center", marginTop: 25}}>
+          <button onClick={this.onClick} className="app-button">
+              Go back
+          </button>
           </div>
         </div>
       </div>

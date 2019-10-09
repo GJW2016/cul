@@ -126,7 +126,9 @@ class Home extends Component {
         country_id: item.country_id
       }
     });
+    document.getElementById("scroll").scrollTop = 100000;
   };
+
 
   render() {
     const {currItem, quizzes, value, index, isResult} = this.state;
@@ -151,7 +153,9 @@ class Home extends Component {
                 <h4>Play a fun trivia game to check how well you know about the festivals celebrated by your friends coming from different parts of the world.</h4>
               </div>
               <div className="quiz-header">
+                <div style={{marginRight:0}}>
                 <img width="500" style={{ height: "100%"}} alt ="" src={quizze.img}></img>
+                </div>
                 <div className="quiz-right">
                   <h5>{quizze.quiz}</h5>
                   {quizze.option.split(",").map((item, key) => {
@@ -181,7 +185,7 @@ class Home extends Component {
                         Why not head to celebration near you and learn more about it & at the same time make friends?
                       </div>
                       <div style={{ textAlign: "right", paddingBottom: 100 }}>
-                        <button className="app-button" onClick={this.onSelectCurrItem}>
+                        <button id= "scroll" className="app-button" onClick={this.onSelectCurrItem}>
                           Event Details
                         </button>
                       </div>
@@ -232,11 +236,11 @@ class Home extends Component {
               <div className="calendar-row-item">
                 <h3>
                   {currItem.festivalName}
-                    {/*<Icon onClick={() => {
+                    <Icon onClick={() => {
                     if (currItem.tag_id && currItem.country_id) {
                       this.props.history.push(`/flash?selectTags=${currItem.tag_id}&selectCountries=${currItem.country_id}`)
                     }
-                  }} className="icon" type="info-circle" />*/}
+                  }} className="icon" type="info-circle" />
                 </h3>
                 <div className="calendar-row-content">
                   {currItem.eventName && (

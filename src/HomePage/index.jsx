@@ -13,7 +13,7 @@ import {
   Banner01DataSource,
   Pricing00DataSource,
   Pricing01DataSource,
-  Footer10DataSource,
+  Footer10DataSource, Pricing02DataSource,
 } from './data.source';
 import './less/antMotionStyle.less';
 
@@ -70,6 +70,12 @@ export default class Home extends React.Component {
         id="Pricing0_1"
         key="Pricing0_1"
         dataSource={Pricing01DataSource}
+        isMobile={this.state.isMobile}
+      />,
+        <Pricing0
+        id="Pricing0_2"
+        key="Pricing0_2"
+        dataSource={Pricing02DataSource}
         isMobile={this.state.isMobile}
       />,
     ];

@@ -17,7 +17,7 @@
 .title1-context {
     padding: 15px;
     position: absolute;
-    right: 0;
+    right: 40px;
     bottom: 0;
     background-color: #fff;
     width: 700px;
@@ -28,9 +28,12 @@
 .title1-context h3{
     font-size: 40px;
     font-weight: 700;
+    font-family: Snell Roundhand, cursive;
 }
 .title1-context p{
-    font-size: 23px;
+    font-size: 22px;
+    margin-top: 10px;
+    font-family: Snell Roundhand, cursive;
 }
 .title2 {
     background: url("https://www.c-diversity.social/images/iter3/back2.jpg") no-repeat center center;
@@ -48,19 +51,22 @@
     text-align: center;
     color: #fff;
     margin-bottom: 30px;
+    font-family: Snell Roundhand, cursive;
 }
 .select h3{
     font-size: 32px;
     text-align: center;
     color: #fff;
     margin-bottom: 30px;
+    font-family: Snell Roundhand, cursive;
 }
 .flex-block{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 0 auto;
+    margin: 30px auto;
     font-size: 34px;
+    font-family: Snell Roundhand, cursive;
 }
 .slect-item{
     padding: 40px;
@@ -74,17 +80,17 @@
     color: #fff;
     text-align: center;
     height: 60px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     font-size: 22px;
 }
 .slect-item img{
     display: block;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 .arrow-down{
     position: fixed;
-    right: 30px;
-    bottom: 30px;
+    right:0px;
+    bottom: 80px;
     width: 60px;
     color: #fff;
     padding: 2px;

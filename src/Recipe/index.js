@@ -2,11 +2,8 @@ import React, { Component } from "react";
 import { Icon } from "antd";
 import "./index.css";
 import { getRecipes } from "../common/api";
-import Header from "../HomePage/Nav0";
-import Footer from "../HomePage/Footer1";
-import { Nav00DataSource, Footer10DataSource } from "../HomePage/data.source.js";
 
-const Country = [{label:"Australia", value:3}, {label:"China", value:0}, {label:"India", value:1}, {label:"Nepal", value:2}];
+const Country = [{label:"Australian", value:3}, {label:"Chinese", value:0}, {label:"Indian", value:1}, {label:"Nepalese", value:2}];
 
 class Recipe extends Component {
   constructor(props) {
@@ -14,7 +11,7 @@ class Recipe extends Component {
     this.state = {
       height: 600,
       data: [],
-      text: 0,
+      text: 3,
       show: false,
       item: {}
     };
@@ -45,14 +42,14 @@ class Recipe extends Component {
       show: false
     });
   };
-
+  onClick = () => {
+    this.props.history.push("/foodie");
+  };
   render() {
     let { height } = this.state;
     let listData = this.getFilterData();
     return (
-        <div>
-      <Header dataSource={Nav00DataSource} isMobile={this.isMobile} />
-      <div className="menu" style={{ height }}>
+      <div className="menu">
         {this.state.show && (
           <div className="modal">
             <div className="modal-inner">
@@ -78,13 +75,15 @@ class Recipe extends Component {
         <div className="menu-header">
           <div style={{ flex: 1, overflow: "hidden", paddingRight: 20 }}>
             <h3 style={{ marginBottom: 10 }}>Cook at home</h3>
-            <p style={{ fontSize: 16, whiteSpace: "pre-wrap",wordBreak:'break-all' }}>
-            Most of the students are completely dreadful of cooking at home which is understandable since cooking seems like a tedious task. But what if you get to cook dishes from your homeland from some easy to cook recipes?
-              If that isn't convincing enough, how about the thought that cooking at home would actually save you a handful of money!
+            <p style={{ fontSize: 20, whiteSpace: "pre-wrap",wordBreak:'keep-all' }}>
+              Most of the students are completely dreadful of cooking at home which is understandable since cooking seems like a tedious task. But what if you get to cook dishes from your homeland from some easy to cook recipes?<br/>
+              If that isn't convincing enough, how about the thought that cooking at home would actually save you a handful of money!<br/>
               Just select a cuisine below and check out the recipes by yourselves we bet you'd be calling your friends for lunch to try out your favorite dish from your homeland!
           </p>
           </div>
+          <div style={{marginTop:50}}>
           <img src="https://www.c-diversity.social/images/iter3/pic1.png" alt=""></img>
+          </div>
         </div>
         {/*  */}
         <div className="choose">
@@ -110,10 +109,13 @@ class Recipe extends Component {
                 </div>
               );
             })}
+          <div style={{textAlign: "center", marginTop:20}}>
+            <button onClick={this.onClick} className="app-button">
+                Go back
+            </button>
+          </div>
           </div>
         </div>
-      </div>
-      <Footer dataSource={Footer10DataSource} isMobile={this.isMobile} />
       </div>
     );
   }

@@ -1,18 +1,35 @@
 .map {
-  background: url("https://www.c-diversity.social/images/iter3/back3.jpg") no-repeat center center;
+  background: url("https://www.c-diversity.social/images/iter3/back4.jpg") no-repeat center center;
   background-size: cover;
 }
 .map-header {
   height: 180px;
-  background: url("https://www.c-diversity.social/images/iter3/pic2.jpg") no-repeat center center;
+  background: url("https://www.c-diversity.social/images/iter3/back5.jpg") no-repeat center center;
   background-size: cover;
   padding-top: 30px;
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
+  font-family: Snell Roundhand, cursive;
+}
+.map-block {
+  padding: 15px;
+  background-color: #fff;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-size: 25px;
+  background: url("https://www.c-diversity.social/images/iter3/back5.jpg") no-repeat center center;
+  font-family: Snell Roundhand, cursive;
+}
+.map-block h3 {
+  font-size: 40px;
+  font-family: Snell Roundhand, cursive;
 }
 .map-header h3 {
   text-align: center;
   font-size: 32px;
+  margin-bottom: 25px;
+  font-family: Snell Roundhand, cursive;
 }
 .map-header select {
   line-height: 40px;
