@@ -35,3 +35,8 @@ export function getQuizzes() {
 export function getRecipes() {
   return axios.get("https://www.c-diversity.social/recipes");
 }
+
+export function getRestaurants() {
+  return axios.get("https://www.c-diversity.social/restaurants");
+}
+

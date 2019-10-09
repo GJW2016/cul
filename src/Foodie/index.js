@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Icon } from "antd";
 import "./index.css"
+import Header from "../HomePage/Nav0";
+import Footer from "../HomePage/Footer1";
+import { Nav00DataSource, Footer10DataSource } from "../HomePage/data.source.js";
 
 class Foodie extends Component{
   constructor(props) {
@@ -25,6 +28,7 @@ class Foodie extends Component{
     const {height} = this.state
     return (
       <div id="scroll" className="home1">
+        <Header dataSource={Nav00DataSource} isMobile={this.isMobile} />
         <div onClick={this.nextPage} className="arrow-down">
           <div>keep scrolling to find a way to curb your hunger</div>
           <Icon type="arrow-down" style={{ fontSize: 20, color: "#fff" }}></Icon>
@@ -64,6 +68,7 @@ class Foodie extends Component{
             </div>
           </div>
         </div>
+        <Footer dataSource={Footer10DataSource} isMobile={this.isMobile} />
       </div>
     );
   }

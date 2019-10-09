@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import { Icon } from "antd";
 import "./index.css";
 import { getRecipes } from "../common/api";
-const Country = ["Australia", "China", "India", "Nepal" ];
+import Header from "../HomePage/Nav0";
+import Footer from "../HomePage/Footer1";
+import { Nav00DataSource, Footer10DataSource } from "../HomePage/data.source.js";
+
+const Country = [{label:"Australia", value:3}, {label:"China", value:0}, {label:"India", value:1}, {label:"Nepal", value:2}];
 
 class Recipe extends Component {
   constructor(props) {
@@ -46,6 +50,8 @@ class Recipe extends Component {
     let { height } = this.state;
     let listData = this.getFilterData();
     return (
+        <div>
+      <Header dataSource={Nav00DataSource} isMobile={this.isMobile} />
       <div className="menu" style={{ height }}>
         {this.state.show && (
           <div className="modal">
@@ -70,12 +76,12 @@ class Recipe extends Component {
           </div>
         )}
         <div className="menu-header">
-          <div>
-            <div>Cook at home</div>
-            <p>
+          <div style={{ flex: 1, overflow: "hidden", paddingRight: 20 }}>
+            <h3 style={{ marginBottom: 10 }}>Cook at home</h3>
+            <p style={{ fontSize: 16, whiteSpace: "pre-wrap",wordBreak:'break-all' }}>
             Most of the students are completely dreadful of cooking at home which is understandable since cooking seems like a tedious task. But what if you get to cook dishes from your homeland from some easy to cook recipes?
-            If that isn't convincing enough, how about the thought that cooking at home would actually save you a handful of money!
-            Just select a cuisine below and check out the recipes by yourselves we bet you'd be calling your friends for lunch to try out your favorite dish from your homeland!
+              If that isn't convincing enough, how about the thought that cooking at home would actually save you a handful of money!
+              Just select a cuisine below and check out the recipes by yourselves we bet you'd be calling your friends for lunch to try out your favorite dish from your homeland!
           </p>
           </div>
           <img src="https://www.c-diversity.social/images/iter3/pic1.png" alt=""></img>
@@ -87,8 +93,8 @@ class Recipe extends Component {
             <select value={this.state.text} onChange={e => this.setState({ text: Number(e.target.value) })}>
               {Country.map((item, index) => {
                 return (
-                  <option value={index} key={index}>
-                    {item}
+                  <option value={item.value} key={index}>
+                    {item.label}
                   </option>
                 );
               })}
@@ -106,6 +112,8 @@ class Recipe extends Component {
             })}
           </div>
         </div>
+      </div>
+      <Footer dataSource={Footer10DataSource} isMobile={this.isMobile} />
       </div>
     );
   }

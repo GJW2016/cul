@@ -12,7 +12,6 @@ import SimpleMap from './Map'
 import Foodie from './Foodie'
 import Recipe from './Recipe'
 
-
 import {
   Nav00DataSource,
   Footer10DataSource,
@@ -46,7 +45,7 @@ class App extends Component {
           <Route exact path="/calendar" component={Calendar} />
           <Route exact path="/selectionPage" component={SelectionPage} />
           <Route exact path="/flash" component={flash} />
-          <Route exact path="/SimpleMap" component={SimpleMap} />
+          <Route exact path="/map" component={SimpleMap} />
           <Route exact path="/analysis" component={Analysis} />
           <Route exact path="/foodie" component={Foodie} />
           <Route exact path="/recipe" component={Recipe} />

@@ -1,0 +1,26 @@
+.map {
+  background: url("https://www.c-diversity.social/images/iter3/back3.jpg") no-repeat center center;
+  background-size: cover;
+}
+.map-header {
+  height: 180px;
+  background: url("https://www.c-diversity.social/images/iter3/pic2.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 30px;
+  width: 80%;
+  margin: 0 auto;
+}
+.map-header h3 {
+  text-align: center;
+  font-size: 32px;
+}
+.map-header select {
+  line-height: 40px;
+  width: 200px;
+  display: inline-block;
+  height: 40px;
+  margin: 0 50px;
+}
+.select-wrap {
+  text-align: center;
+}
