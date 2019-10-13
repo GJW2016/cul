@@ -19,6 +19,7 @@
   display: flex;
   align-items: center;
   margin:0 auto;
+  border-radius: 5px;
 }
 .info-header > div {
   margin:0 auto;
@@ -39,8 +40,12 @@
   align-items: center;
   margin:0 auto;
   width:800px;
-  height:500px
+  height:500px;
+  margin-bottom: 10px;
+  margin-top:60px;
+  margin-bottom: 25px;
 }
+
 .info-left-btn,
 .info-right-btn {
   width: 55px;
@@ -60,6 +65,7 @@
   background-color: rgba(255, 255, 255, 0.9);
 }
 .info-banner-inner {
+
   flex: 1;
   padding: 0 40px;
 }
@@ -81,5 +87,6 @@
 }
 .info-content{
   display: flex;
+  border-radius: 5px;
 
 }

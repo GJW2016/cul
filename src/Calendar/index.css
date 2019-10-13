@@ -1,3 +1,9 @@
+html{
+  overflow: hidden;
+}
+body{
+  overflow-y: auto;
+}
 .calendar {
   width: 100%;
   min-height: 100%;
@@ -13,10 +19,11 @@
 .calendar-header {
   min-height: 150px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255);
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  border-radius: 5px;
 }
 .calendar-header > div {
   padding-right: 30px;
@@ -41,6 +48,7 @@
   min-height: 500px;
   font-size: 0;
   font-size: 30px;
+  border-radius: 5px;
 }
 .calendar-row h3 {
   background-color: #a480df;
@@ -83,9 +91,10 @@
   font-size: 15px;
 }
 .quiz-block{
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255);
   margin-bottom: 20px;
   padding: 15px;
+  border-radius: 5px;
 }
 .quiz-block h5{
   margin-bottom: 0;
@@ -103,13 +112,14 @@
 .quiz-header{
   display: flex;
   background-color: rgba(164,128,223,.3);
+  border-radius: 5px;
 }
 .quiz-right{
   flex: 1;
   padding: 15px;
   padding-left: 150px;
   height: 100%;
-
+  border-radius: 5px;
 }
 .quiz-right h5{
   padding-bottom: 10px;

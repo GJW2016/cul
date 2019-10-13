@@ -126,7 +126,7 @@ class Home extends Component {
         country_id: item.country_id
       }
     });
-    document.getElementById("scroll").scrollTop = 100000;
+    document.body.scrollTop = 1000;
   };
 
 
@@ -184,7 +184,7 @@ class Home extends Component {
                       <div>
                         Why not head to celebration near you and learn more about it & at the same time make friends?
                       </div>
-                      <div style={{ textAlign: "right", paddingBottom: 100 }}>
+                      <div style={{ textAlign: "right", paddingBottom: 30 }}>
                         <button id= "scroll" className="app-button" onClick={this.onSelectCurrItem}>
                           Event Details
                         </button>
@@ -202,7 +202,7 @@ class Home extends Component {
                       <div>
                         Try again! Giving away the answer makes it too easy doesn't it?
                       </div>
-                      <div style={{ textAlign: "right", paddingBottom: 100 }}>
+                      <div style={{ textAlign: "right", paddingBottom: 30 }}>
                         <button className="app-button" onClick={this.onSelectCurrItem}>
                           Event Details
                         </button>

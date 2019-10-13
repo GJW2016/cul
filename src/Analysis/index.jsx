@@ -40,6 +40,19 @@ export default class Home extends React.Component {
       }, 500);
     }
     /* 如果不是 dva 2.0 请删除 end */
+    window.onload = function (){
+      const divElement = document.getElementById('viz1570875218811');
+      const vizElement = divElement.getElementsByTagName('object')[0];
+      vizElement.style.minWidth = '520px';
+      vizElement.style.maxWidth = '1050px';
+      vizElement.style.width = '100%';
+      vizElement.style.minHeight = '587px';
+      vizElement.style.maxHeight = '887px';
+      vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+      const scriptElement = document.createElement('script');
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    }
   }
 
   render() {
@@ -52,6 +65,32 @@ export default class Home extends React.Component {
       />,
     ];
     return (
+        <div>
+           <div className='tableauPlaceholder' id='viz1570875218811' style={{position: 'relative'}}>
+          <noscript>
+            <a href='#'>
+              <img alt=' '
+                   src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;InternationalStudents_15708751171640&#47;Dashboard1&#47;1_rss.png'
+                   style='border: none'/>
+            </a>
+          </noscript>
+          <object className='tableauViz' style={{display:'none'}}>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
+            <param name='embed_code_version' value='3'/>
+            <param name='site_root' value=''/>
+            <param name='name' value='InternationalStudents_15708751171640&#47;Dashboard1'/>
+            <param name='tabs' value='no'/>
+            <param name='toolbar' value='yes'/>
+            <param name='static_image'
+                   value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;InternationalStudents_15708751171640&#47;Dashboard1&#47;1.png'/>
+            <param name='animate_transition' value='yes'/>
+            <param name='display_static_image' value='yes'/>
+            <param name='display_spinner' value='yes'/>
+            <param name='display_overlay' value='yes'/>
+            <param name='display_count' value='yes'/>
+            <param name='filter' value='publish=yes'/>
+          </object>
+        </div>
       <div
         className="templates-wrapper"
         ref={(d) => {
@@ -62,6 +101,7 @@ export default class Home extends React.Component {
         {this.state.show && children}
         {/* 如果不是 dva 2.0 替换成 {children} end */}
       </div>
+        </div>
     );
   }
 }

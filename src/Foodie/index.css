@@ -1,6 +1,12 @@
 *{
     box-sizing: border-box;
 }
+html{
+  overflow: hidden;
+}
+body{
+  overflow-y: auto;
+}
 .home1 {
     matgin: 0 auto;
     height: 100%;
@@ -20,20 +26,20 @@
     right: 40px;
     bottom: 0;
     background-color: #fff;
-    width: 700px;
-    height: 500px;
-    border-radius: 4px;
+    width: 50%;
+    height: 70%;
+    border-radius: 5px;
     box-shadow: 0 1px 10px rgba(0,0,0,0.2);
 }
 .title1-context h3{
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 700;
-    font-family: Snell Roundhand, cursive;
+    font-style: italic;
 }
 .title1-context p{
-    font-size: 22px;
+    font-size: 27px;
     margin-top: 10px;
-    font-family: Snell Roundhand, cursive;
+
 }
 .title2 {
     background: url("https://www.c-diversity.social/images/iter3/back2.jpg") no-repeat center center;
@@ -51,14 +57,14 @@
     text-align: center;
     color: #fff;
     margin-bottom: 30px;
-    font-family: Snell Roundhand, cursive;
+    font-style: italic
 }
 .select h3{
     font-size: 32px;
     text-align: center;
     color: #fff;
     margin-bottom: 30px;
-    font-family: Snell Roundhand, cursive;
+    font-style: italic
 }
 .flex-block{
     display: flex;
@@ -66,7 +72,7 @@
     justify-content: space-around;
     margin: 30px auto;
     font-size: 34px;
-    font-family: Snell Roundhand, cursive;
+    font-style: italic
 }
 .slect-item{
     padding: 40px;
@@ -75,6 +81,8 @@
     background-color: #897168;
     width: 480px;
     color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
 }
 .slect-item h4{
     color: #fff;
@@ -103,6 +111,7 @@
     border:1px solid #70554b;
     cursor: pointer;
     -webkit-user-select: none;
+    border-radius: 5px;
 }
 .arrow-down div {
     text-align: center;

@@ -20,10 +20,10 @@ const greatPlaceStyle = {
   color: "#3f51b5",
   fontSize: 14,
   fontWeight: "bold",
-  padding: "4px 6px",
+  padding: "15px 6px",
   cursor: "pointer",
   whiteSpace: "nowrap",
-  boxShadow: "0px 1px 5px rgba(0,0,0,.15)"
+  boxShadow: "0px 1px 5px rgba(0,0,0,.15)",
 };
 
 const AnyReactComponent = ({ text }) => <div style={greatPlaceStyle}>{text}</div>;
@@ -55,6 +55,7 @@ class Map extends Component {
         data: data.json_list || []
       });
     });
+    document.body.scrollIntoView(1);
   }
 
   getFilterData = () => {
@@ -81,12 +82,14 @@ class Map extends Component {
     this.setState({
       item: item || {}
     });
+    document.body.scrollTop = 2000;
   };
   onClick = () => {
     this.props.history.push("/foodie");
   };
   render() {
     const data = this.getFilterData();
+
     return (
       <div className="map" style={{ height: "100%", width: "100%", paddingTop: 50 }}>
         <div className="map-block">
@@ -114,7 +117,7 @@ class Map extends Component {
             </select>
             <select value={this.state.rating} onChange={e => this.setState({ rating: Number(e.target.value) })}>
               <option value={-1} key="all">
-                Rating
+                Select a rating
               </option>
               {Ratings.map((item, index) => {
                 return (
@@ -133,7 +136,7 @@ class Map extends Component {
             })}
           </GoogleMapReact>
         </div>
-        <div style={{ width: "70%", padding: 30, margin: "0 auto", marginTop: 30, backgroundColor: "#fff", marginBottom: 30, fontFamily: "Snell Roundhand, cursive"}}>
+        <div style={{ width: "70%", padding: 30, margin: "0 auto", marginTop: 30, backgroundColor: "#fff", marginBottom: 30, fontFamily: "Snell Roundhand, cursive", borderRadius: 5}}>
           <h2 style={{ textAlign: "center", fontSize: 30 }}>Restaurant details</h2>
           <div>
             <h2 style={{ textAlign: "left" }}>Name:</h2>
@@ -157,5 +160,7 @@ class Map extends Component {
     );
   }
 }
+
+
 
 export default Map;

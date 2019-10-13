@@ -5,12 +5,12 @@ import Header from './HomePage/Nav0';
 import Footer from './HomePage/Footer1';
 import Home from './HomePage';
 import flash from './Flashcard'
-import Analysis from './Analysis'
 import Calendar from "./Calendar";
 import SelectionPage from './SelectionPage'
 import SimpleMap from './Map'
 import Foodie from './Foodie'
 import Recipe from './Recipe'
+import analysis from './Analysis1'
 
 import {
   Nav00DataSource,
@@ -46,9 +46,9 @@ class App extends Component {
           <Route exact path="/selectionPage" component={SelectionPage} />
           <Route exact path="/flash" component={flash} />
           <Route exact path="/map" component={SimpleMap} />
-          <Route exact path="/analysis" component={Analysis} />
           <Route exact path="/foodie" component={Foodie} />
           <Route exact path="/recipe" component={Recipe} />
+          <Route exact path="/analysis" component={analysis} />
           <Footer dataSource={Footer10DataSource} isMobile={this.isMobile} />
         </div>
       </Router>

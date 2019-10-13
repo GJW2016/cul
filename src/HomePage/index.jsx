@@ -2,18 +2,15 @@
 /* eslint arrow-parens: 0 */
 import React from 'react';
 import { enquireScreen } from 'enquire-js';
-
-import Nav0 from './Nav0';
 import Banner0 from './Banner0';
 import Pricing0 from './Pricing0';
-import Footer1 from './Footer1';
 
 import {
-  Nav00DataSource,
+
   Banner01DataSource,
   Pricing00DataSource,
   Pricing01DataSource,
-  Footer10DataSource, Pricing02DataSource,
+  Pricing02DataSource,
 } from './data.source';
 import './less/antMotionStyle.less';
 

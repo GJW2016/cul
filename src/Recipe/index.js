@@ -26,6 +26,7 @@ class Recipe extends Component {
         data: data.json_list || []
       });
     });
+    document.body.scrollIntoView(1);
   }
 
   getFilterData() {
@@ -74,7 +75,7 @@ class Recipe extends Component {
         )}
         <div className="menu-header">
           <div style={{ flex: 1, overflow: "hidden", paddingRight: 20 }}>
-            <h3 style={{ marginBottom: 10 }}>Cook at home</h3>
+            <h3 style={{ marginBottom: 10, fontStyle: 'italic'}}>Cook at home</h3>
             <p style={{ fontSize: 20, whiteSpace: "pre-wrap",wordBreak:'keep-all' }}>
               Most of the students are completely dreadful of cooking at home which is understandable since cooking seems like a tedious task. But what if you get to cook dishes from your homeland from some easy to cook recipes?<br/>
               If that isn't convincing enough, how about the thought that cooking at home would actually save you a handful of money!<br/>
@@ -104,8 +105,12 @@ class Recipe extends Component {
               return (
                 <div className="food-item" key={key}>
                   <h3>{item.name}</h3>
+                  <div>
                   <img width="300" height="300" src={item.pic} alt=""></img>
-                  <button onClick={() => this.onShowItem(item)}>Check out the recipe >></button>
+                  </div>
+                  <div style={{marginTop: 20}}>
+                  <button className="app-button" onClick={() => this.onShowItem(item)}>Check out the recipe >></button>
+                  </div>
                 </div>
               );
             })}

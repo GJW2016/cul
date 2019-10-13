@@ -13,10 +13,11 @@ class Foodie extends Component{
   componentWillMount() {
     this.setState({
       height: document.body.offsetHeight
-    })
+    });
+    document.body.scrollIntoView(1);
   }
   nextPage = () => {
-    document.getElementById("scroll").scrollTop = 100000;
+    document.body.scrollTop = 2000;
   };
   onLeftClick = () => {
     this.props.history.push("/recipe");
@@ -36,19 +37,18 @@ class Foodie extends Component{
           <div className="title1-context">
             <h3>Are you a Foodie?</h3>
             <p>
-              Food is an integral part of people's lives, and is much more than just a means of survival. Coming to Melbourne, one might be easily become overwhelmed by the enormous choices of food.
-              Luckily enough Melbourne is Australia's culinary capital and with 3,500 restaurants and serves up cuisines from more than 70 countries.  That is overwhelming, correct? Especially when
-              you're new in the city and are inquisitive about the authentic Australian cuisine which sometime tends to get lost with the range of varied cuisines that has now become an integral part
-              of Melbourne's food culture. Brace yourselves as you are in for a ride that will take you in for a journey of Australian food while embracing your home country's food culture.
+              <br/>-Coming to Melbourne, one might be easily become overwhelmed by the enormous choices of food.
+              <br/><br/>-Luckily enough Melbourne is Australia's culinary capital and with 3,500 restaurants and serves up cuisines from more than 70 countries.
+              <br/><br/>-That is overwhelming, correct?
+              <br/><br/>-Brace yourselves as you are in for a ride that will take you in for a journey of Australian food while embracing your home country's food culture.
             </p>
           </div>
         </div>
         <div className="title1 title2" style={{height:969}}>
-          <div className="title1-context" style={{ left : 0, top:50, height:700, bottom: 'auto',marginTop: 50}}>
+          <div className="title1-context" style={{ left : 20, top:50, height:600, width:"40%", bottom: 'auto',marginTop: 50}}>
             <p style={{marginTop:30}}>
-            Since Melbourne is a multicultural city, the culture of food also indicates this characteristic. Which means restaurants with different cultural backgrounds could locate in several major commercial streets and shopping center. On the other hand, since some habitats with same cultural background tend to live in the same district in Melbourne, restaurants from these countries will also located in these districts.
-            Moreover, in some home parties or community activities, home-made food from different countries can also be one necessary part. In these activities, people can just enjoy different styles of food, which is a integral part in everyone’s daily life.
-            Since food can be a crucial means of communication, it also can be found that most young generation in Melbourne often socialize over food in restaurants of varied cuisines. Thus we take the initiative to make food easily accessible and not a financial burden on the international students by offering two options that will ease making the meal choices everyday.
+            <br/>-Since food can be a crucial means of communication, it also can be found that most young generation in Melbourne often socialize over food in restaurants of varied cuisines.
+            <br/><br/>-Thus we take the initiative to make food easily accessible and not a financial burden on the international students by offering two options that will ease making the meal choices everyday.
             </p>
           </div>
         </div>
