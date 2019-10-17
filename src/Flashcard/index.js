@@ -121,9 +121,11 @@ class Flashcard extends Component {
                   <img style={{ width: 200, height: "auto"}} src={item.img} alt="" />
                 </div>
                 <div className="info-text" style={{ flex: 1, paddingLeft: 20 }}>
-                  <h3>{item.tag.name}</h3>
+                  <h3><strong>{item.tag.name}</strong></h3>
+                  <h3>{item.desc.content_name}</h3>
                   <p>{item.desc.content}</p>
                 </div>
+                <div>{active+1}/{banner.length}</div>
               </div>
             </div>
             <div

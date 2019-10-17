@@ -19,7 +19,7 @@ body{
 .calendar-header {
   min-height: 150px;
   padding: 20px;
-  background-color: rgba(255, 255, 255);
+  background-color: rgba(255, 255, 255, 1);
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -91,7 +91,7 @@ body{
   font-size: 15px;
 }
 .quiz-block{
-  background-color: rgba(255, 255, 255);
+  background-color: rgba(255, 255, 255,1);
   margin-bottom: 20px;
   padding: 15px;
   border-radius: 5px;

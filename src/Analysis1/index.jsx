@@ -91,7 +91,7 @@ export default class Home extends React.Component {
           }}
         >
           <div style={{marginLeft: 400}}>
-           <div className='tableauPlaceholder' id='viz1570875218811' style={{position: 'static',height: 800,width:800}}>
+           <div className='tableauPlaceholder' id='viz1570875218811' style={{position: 'relative'}}>
             <noscript>
               <a href='#'>
                 <img alt=' '

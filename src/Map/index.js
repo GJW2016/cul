@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 import "./index.css";
 import { getRestaurants } from "../common/api";
+import {Checkbox, Col, Row, Icon} from "antd";
 
 
 const Country = ["Australian", "Chinese", "Indian", "Nepalese"];
@@ -26,7 +27,7 @@ const greatPlaceStyle = {
   boxShadow: "0px 1px 5px rgba(0,0,0,.15)",
 };
 
-const AnyReactComponent = ({ text }) => <div style={greatPlaceStyle}>{text}</div>;
+const AnyReactComponent = ({ text }) => <div style={greatPlaceStyle}><Icon className="icon" type="info-circle"/> {text}</div>;
 
 class Map extends Component {
   static defaultProps = {
@@ -82,7 +83,6 @@ class Map extends Component {
     this.setState({
       item: item || {}
     });
-    document.body.scrollTop = 2000;
   };
   onClick = () => {
     this.props.history.push("/foodie");
@@ -129,34 +129,46 @@ class Map extends Component {
             </select>
           </div>
         </div>
-        <div style={{ width: "70%", height: 600, margin: "0 auto", marginTop: 30 }}>
-          <GoogleMapReact onChildClick={this._onChildClick} bootstrapURLKeys={{ key: "AIzaSyDjQTLkPlplw6k-1peUtLcIvXU5IW_ArwI" }} defaultCenter={this.props.center} defaultZoom={this.props.zoom}>
-            {data.map(item => {
-              return <AnyReactComponent lat={Number(item.latitude)} lng={Number(item.longitude)} text={item.name} key={item.id} />;
-            })}
-          </GoogleMapReact>
-        </div>
-        <div style={{ width: "70%", padding: 30, margin: "0 auto", marginTop: 30, backgroundColor: "#fff", marginBottom: 30, fontFamily: "Snell Roundhand, cursive", borderRadius: 5}}>
-          <h2 style={{ textAlign: "center", fontSize: 30 }}>Restaurant details</h2>
-          <div>
-            <h2 style={{ textAlign: "left" }}>Name:</h2>
-            <div style={{ fontSize: 20, textAlign: "left" }}>{this.state.item.name}</div>
-          </div>
-          <div>
-            <h2 style={{ textAlign: "left" }}>Address:</h2>
-            <div style={{ fontSize: 20, textAlign: "left" }}>{this.state.item.address}</div>
-          </div>
-          <div>
-            <h2 style={{ textAlign: "left" }}>Opening hours:</h2>
-            <div style={{ whiteSpace: "pre-wrap", fontSize: 20, textAlign: "left" }} dangerouslySetInnerHTML={{ __html: this.state.item.timings }}></div>
-          </div>
-          <div style={{textAlign: "center", marginTop: 25}}>
-          <button onClick={this.onClick} className="app-button">
-              Go back
-          </button>
-          </div>
-        </div>
+
+        <Row gutter={32} className="home-row">
+          <Col span={15}>
+            <Row gutter={12}>
+              <div style={{ width: "82%", height: 600, marginTop: 30, marginLeft:'18%'}}>
+                <GoogleMapReact onChildClick={this._onChildClick} bootstrapURLKeys={{ key: "AIzaSyDjQTLkPlplw6k-1peUtLcIvXU5IW_ArwI" }} defaultCenter={this.props.center} defaultZoom={this.props.zoom}>
+                  {data.map(item => {
+                    return <AnyReactComponent lat={Number(item.latitude)} lng={Number(item.longitude)} text={item.name} key={item.id} />;
+                  })}
+                </GoogleMapReact>
+              </div>
+            </Row>
+          </Col>
+          <Col span={9} style={{ borderLeft: "1px solid rgba(0,0,0,.45)" }}>
+            <Row gutter={12}>
+             <div style={{ width: "70%", padding: 30, marginTop: 30, backgroundColor: "#fff", marginBottom: 30, borderRadius: 5}}>
+              <h2 style={{ textAlign: "center", fontSize: 30 }}>Restaurant details</h2>
+              <div>
+                <h2 style={{ textAlign: "left" }}>Name:</h2>
+                <div style={{ fontSize: 20, textAlign: "left" }}>{this.state.item.name}</div>
+              </div>
+              <div>
+                <h2 style={{ textAlign: "left" }}>Address:</h2>
+                <div style={{ fontSize: 20, textAlign: "left" }}>{this.state.item.address}</div>
+              </div>
+              <div>
+                <h2 style={{ textAlign: "left" }}>Opening hours:</h2>
+                <div style={{ whiteSpace: "pre-wrap", fontSize: 20, textAlign: "left" }} dangerouslySetInnerHTML={{ __html: this.state.item.timings }}></div>
+              </div>
+              <div style={{marginTop: 20,textAlign: 'center'}}>
+              <button onClick={this.onClick} className="app-button">
+                Go back
+              </button>
+             </div>
+             </div>
+            </Row>
+          </Col>
+        </Row>
       </div>
+
     );
   }
 }

@@ -61,8 +61,6 @@ class Recipe extends Component {
                   <div style={{ padding: "15px" }}>
                     <p style={{ fontWeight: 700 }}>List of ingredients:</p>
                     <div style={{ whiteSpace: "pre-wrap" }} dangerouslySetInnerHTML={{ __html: this.state.item.ingredients }}></div>
-                    <br />
-                    <br />
                   </div>
                   <div style={{ padding: "15px" }}>
                     <p style={{ fontWeight: 700 }}>How to cook:</p>
@@ -89,7 +87,7 @@ class Recipe extends Component {
         {/*  */}
         <div className="choose">
           <div className="choose-head">
-            <h3>Choose a cuisine</h3>
+            <h3>Choose a Cuisine</h3>
             <select value={this.state.text} onChange={e => this.setState({ text: Number(e.target.value) })}>
               {Country.map((item, index) => {
                 return (
@@ -109,7 +107,7 @@ class Recipe extends Component {
                   <img width="300" height="300" src={item.pic} alt=""></img>
                   </div>
                   <div style={{marginTop: 20}}>
-                  <button className="app-button" onClick={() => this.onShowItem(item)}>Check out the recipe >></button>
+                  <button className="item_button" onClick={() => this.onShowItem(item)}>Check out the recipe >></button>
                   </div>
                 </div>
               );

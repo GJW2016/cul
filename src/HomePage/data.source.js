@@ -35,7 +35,7 @@ export const Nav00DataSource = {
         className: 'header0-item',
         children: {
           href: '/calendar',
-          children: [{ children: ('Festival calendar'), name: 'text' }],
+          children: [{ children: ('Festival Calendar'), name: 'text' }],
         },
       },
       {
@@ -68,7 +68,7 @@ export const Banner01DataSource = {
   button: {
     className: 'banner0-button',
     href:'/analysis',
-    children: (<strong>learn more</strong>), },
+    children: (<strong>Learn More</strong>), },
 };
 export const Pricing00DataSource = {
   wrapper: { className: 'home-page-wrapper pricing0-wrapper' },
@@ -90,12 +90,11 @@ export const Pricing00DataSource = {
         name: 'content',
         children:(
             <h2>
-              <br />
+              <h2><strong>Cultural Info</strong></h2>
               <br />
               We understand that it get difficult to make friends with people from different background. But guess what?
               <br />
               All of us love food and enjoy festivals irrespective of what country we are from. Thus, being a great conversation starter!
-              <br />
               <br />
               <br />
             </h2>
@@ -129,11 +128,10 @@ export const Pricing01DataSource = {
         children:
           (
             <h2>
-              <br />
+              <h2><strong>Festival Calendar</strong></h2>
               <br />
               Shifting to a completely different country may make you feeling blue and home-sick.
               Step out of your house and explore the cultural events happening in Melbourne.
-              <br />
               <br />
               <br />
             </h2>
@@ -170,10 +168,9 @@ export const Pricing02DataSource = {
         children:
           (
             <h2>
-              <br />
+              <h2><strong>Foodie</strong></h2>
               <br />
               Melbourne has one of the biggest assortments of cuisines in the world. Living alone can cause making decisions as simple as food a difficult task. Why not explore the options that you get living in a multicultural society?
-              <br />
               <br />
               <br />
             </h2>
